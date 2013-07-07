@@ -61,7 +61,7 @@ end
 development:
   adapter: postgresql
   encoding: unicode
-  database: tempdb
+  database: abs_next_development
   pool: 5
   username: postgres
   password: postgres
@@ -71,7 +71,7 @@ development:
 test:
     adapter: postgresql
     encoding: unicode
-    database: tempdb_test
+    database: abs_test
     pool: 5
     username: postgres
     password: postgres
