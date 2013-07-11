@@ -7,7 +7,7 @@ body{
 	font-size:13px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:#ACBA0F;
-	background-color:#EBF2C2;
+	background-color:#333333;
 	}
 
 img{margin:0; padding:0; border:none;}
@@ -272,7 +272,12 @@ div.wrapper p {
 
 /* ----------------------------------------------Footer-------------------------------------*/
 
-#footer{line-height:1.6em; background:url("../images/footer_bg.gif") 550px 0 repeat-y;}
+#footer{
+	line-height:1.6em; 
+	background-color:#333333;
+	width:960px;
+	height:auto;
+}
 
 #footer a{
 	color:#979797;
@@ -293,6 +298,7 @@ div.wrapper p {
 	}
 
 #footer address{
+	color:#979797;
 	font-style:normal;
 	}
 

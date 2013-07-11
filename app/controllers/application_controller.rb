@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   
   def loading_menu_options
     @menu_options ||= ["HOME", "PROGRAMS", "REGISTRATION", "TESTIMONIAL", "CONTACT US"]
+    @quick_links ||= ["Homepage", "Contact Us", "Sitemap", "Privacy Policy", "Term of Use", "Copyright Information"]
   end
 
 end

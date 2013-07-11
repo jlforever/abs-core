@@ -1,0 +1,21 @@
+<div id="footer" class="clear">
+	<div class="footbox">
+		<h2>Quick Links</h2>
+		<ul>
+			<% @quick_links.each do |qlink| %>
+				<li><%= link_to(qlink, "#")%></li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="footbox">
+      <h2>How to reach us</h2>
+	  <address>
+		9 Dobson Road<br />
+		Braintree MA<br />
+		02184<br />
+		<br />
+		Tel: (781) 519 - 9319<br />
+		Email: info@alphabetaschool.org<br />
+	  </address>
+	</div>
+</div>
