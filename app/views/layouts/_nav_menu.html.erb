@@ -1,8 +1,7 @@
 <div id="topnav">
   <ul>
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">Programs</a></li>
-    <li><a href="#">Registration</a></li>
-    <li class="last"><a href="#">Contact Us</a></li>
+    <% @menu_options.each do |an_option| %>
+		<li><%= link_to(an_option, "#")%></li>
+	<% end %>
   </ul>
 </div>
