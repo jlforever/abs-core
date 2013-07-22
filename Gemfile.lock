@@ -44,8 +44,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    configatron (2.8.4)
-      yamler (>= 0.1.0)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -135,7 +133,6 @@ GEM
       rack
       raindrops (~> 0.7)
     uuidtools (2.1.4)
-    yamler (0.1.0)
 
 PLATFORMS
   ruby
@@ -144,7 +141,6 @@ DEPENDENCIES
   awesome_print
   aws-sdk
   coffee-rails (~> 3.1.1)
-  configatron (~> 2.8.3)
   factory_girl
   hirb
   jquery-rails
