@@ -34,7 +34,9 @@ module Registration
     
     def self.parse_reg_page_headers
       text = File.read(File.join(Rails.root, 'public', 'support_files', 'registration', 'reg_page_intro_text.txt'))
-      text.split(/\n/)
+      lines = text.split(/\n/)
+      puts lines
+      { "header" => lines[0..-3], "date_time" => lines[-2..-1] }
     end
     
   end
