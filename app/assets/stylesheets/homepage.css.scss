@@ -7,8 +7,8 @@
 	}
 
 #hpage_featured a{
-	color:#510000;
-	background-color:#E1D6CB;
+	color:#008bd1;
+	background-color:#EBF2C2;
 	}
 
 #hpage_featured .image{
@@ -16,6 +16,33 @@
 	float:left;
 	padding-left:55px;
 	width:360px;
+}
+
+#hpage_featured .left_float{
+	display:block;
+	float:left;
+	width:550px;
+	height:350px;
+	line-height:1.6em;
+}
+
+#hpage_featured .left_float h1 #hpage_featured .left_float h2 #hpage_featured .left_float h3 {
+	background-color:#EBF2C2;
+	margin:0 0 15px 3px;
+	padding:0 0 10px 0;
+	border-bottom:1px solid #FFFFFF;
+}
+
+#hpage_featured .left_float ul {
+	background-color:#EBF2C2;
+	width:900px;
+	margin:0 0 15px 18px;
+	padding:0 0 10px 0;
+}
+
+#hpage_featured .left_float li {
+	font-size:13px;
+	color:#008080;
 }
 
 #hpage_featured .intro{

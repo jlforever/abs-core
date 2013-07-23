@@ -2,8 +2,8 @@
 	<div class="footbox">
 		<h2>Quick Links</h2>
 		<ul>
-			<% @quick_links.each do |qlink| %>
-				<li><%= link_to(qlink, "#")%></li>
+			<% @quick_links.each do |qlink, qlink_source| %>
+				<li><%= link_to(qlink, qlink_source)%></li>
 			<% end %>
 		</ul>
 	</div>

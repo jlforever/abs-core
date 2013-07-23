@@ -1,7 +1,7 @@
 <div id="topnav">
   <ul>
-    <% @menu_options.each do |an_option| %>
-		<li><%= link_to(an_option, "#")%></li>
+    <% @menu_options.each do |an_option, an_option_link| %>
+		<li><%= link_to(an_option, an_option_link)%></li>
 	<% end %>
   </ul>
 </div>

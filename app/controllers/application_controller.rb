@@ -4,8 +4,21 @@ class ApplicationController < ActionController::Base
   before_filter :loading_menu_options
   
   def loading_menu_options
-    @menu_options ||= ["HOME", "PROGRAMS", "REGISTRATION", "TESTIMONIAL", "CONTACT US"]
-    @quick_links ||= ["Homepage", "Contact Us", "Sitemap", "Privacy Policy", "Term of Use", "Copyright Information"]
+    @menu_options ||= { 
+      "HOME" => root_path,
+      "PROGRAMS" => "#",
+      "REGISTRATION" => registration_pages_path,
+      "TESTIMONIAL" => "#",
+      "CONTACT US" => "#"
+    }
+    @quick_links ||= { 
+      "Homepage" => root_path, 
+      "Contact Us" => "#", 
+      "Sitemap" => "#", 
+      "Privacy Policy" => "#", 
+      "Term of Use" => "#", 
+      "Copyright Information" => "#"
+    }
   end
 
 end
