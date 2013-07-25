@@ -53,7 +53,7 @@ module S3Utils
   private_class_method :config_keys
 
   def self.scope_bucket_name(bucket_name)
-    "#{bucket_name}.yesware.com"
+    "#{bucket_name}"
   end
   private_class_method :scope_bucket_name
 
