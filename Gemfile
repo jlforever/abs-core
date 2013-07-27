@@ -12,6 +12,8 @@ gem 'jquery-rails'
 gem 'coffee-rails', '~> 3.1.1'
 gem 'aws-sdk'
 gem 'formtastic'
+gem 'memcachier'
+gem 'dalli'
 
 # Gems used only for assets and not required
 # in production environments by default.
