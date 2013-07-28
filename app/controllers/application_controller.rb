@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
       "PROGRAMS" => "#",
       "REGISTRATION" => registration_pages_path,
       "TESTIMONIAL" => "#",
-      "CONTACT US" => "#"
+      "CONTACT US" => new_contact_us_page_path
     }
     @quick_links ||= { 
       "Homepage" => root_path, 
