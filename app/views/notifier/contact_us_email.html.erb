@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+	<p>Dear ABLS admin,</p>
+	<p><%= @contact_info['parent_first_name'] + ", " + @contact_info['parent_last_name']%> has contacted you about ABLS and its programs.</p>
+	<% if @contact_info['picked_interest'].present? %>
+		<p>He/She is interested in learning more about <%= @contact_info['picked_interest'] %>.</p>
+	<% end %>
+	<% if @contact_info['picked_loi'].present? %>
+		<p>He/She is interested in learning about ABLS's <%= @contact_info['picked_loi'].join(" and ") %> language(s).</p>
+	<% end %>
+	<% if @contact_info['notes'] && @contact_info['notes']['text'] %>
+		<p>He/She has the following inquiry: </p>
+		<p><%= @contact_info['notes']['text']%></p>
+	<% end %>
+	<p>Please contact him/her with the following contact info:</p>
+	<table style="border:1px">
+	<tr>
+	<td>Name:  </td><td><%= @contact_info['parent_first_name'] + ", " + @contact_info['parent_last_name'] %></td>
+	</tr>
+	<tr>
+	<td>Phone Number:  </td><td><%= @contact_info['phone_number'] %></td>
+	</tr>
+	<tr>
+	<td>Email Address:  </td><td><%= @contact_info['email_address'] %></td>
+	</tr>
+	</table>
+	
+	<p>------------------------------</p>
+	<p>ABLS Internal</p>
+	<p>www.alphabetaschool.org</p>
+	<p><%= Time.now.strftime("%m-%d-%Y %H:%M:%S") %></p>
+	<p>------------------------------</p>
+  </body>
+</html>

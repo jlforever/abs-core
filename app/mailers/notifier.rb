@@ -5,7 +5,8 @@ class Notifier < ActionMailer::Base
   end
   
   def contact_us_email(contact_info)
-    to_address = build_to_address(contact_info[:email], contact_info[:first_name], contact_info[:last_name])
+    to_address = build_to_address(contact_info['email_address'], contact_info['parent_first_name'], contact_info['parent_last_name'])
+    @contact_info = contact_info
     mail(:to => 'info@alphabetaschool.org', 
       :from => to_address, 
       :subject => "#{to_address} is interested in ABLS")
@@ -13,7 +14,7 @@ class Notifier < ActionMailer::Base
   
   def build_to_address(email, first_name, last_name)
     name = first_name.to_s + " " + last_name.to_s
-    name + "<" + email + ">"
+    name + " <" + email + ">"
   end
   private :build_to_address
 

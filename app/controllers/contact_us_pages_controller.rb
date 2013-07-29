@@ -19,7 +19,7 @@ class ContactUsPagesController < ApplicationController
     # all of the required fields are appearing in the 
     # params list
     if @valid
-      #Notifier.contact_us_email(params).deliver
+      Notifier.contact_us_email(params).deliver
     else
       flash[:flash_alert] = "Not all of the required fields are filled in!"
       redirect_to new_contact_us_page_path

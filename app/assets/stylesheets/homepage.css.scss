@@ -22,11 +22,19 @@
 	display:block;
 	float:left;
 	width:550px;
-	height:440px;
+	height:380px;
 	line-height:1.6em;
 }
 
-#hpage_featured .left_float .cs_form_container{
+#hpage_featured .left_float_cs{
+	display:block;
+	float:left;
+	width:550px;
+	height:465px;
+	line-height:1.6em;
+}
+
+#hpage_featured .left_float_cs .cs_form_container{
 	margin-top: -12px;
 	margin-left:6px; 
 	color:#000000; 

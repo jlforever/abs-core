@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     }
     @quick_links ||= { 
       "Homepage" => root_path, 
-      "Contact Us" => "#", 
+      "Contact Us" => new_contact_us_page_path, 
       "Sitemap" => "#", 
       "Privacy Policy" => "#", 
       "Term of Use" => "#", 

@@ -1,0 +1,25 @@
+Dear ABLS admin,
+
+<%= @contact_info['parent_first_name'] + ", " + @contact_info['parent_last_name']%> has contacted you about ABLS and its programs.
+
+<% if @contact_info['picked_interest'].present? %>
+He/She is interested in learning more about <%= @contact_info['interest'] %>.
+<% end %>
+<% if @contact_info['picked_loi'].present? %>
+He/She is interested in learning about ABLS's <%= @contact_info['picked_loi'].join(" and ") %> language(s).
+<% end %>
+<% if @contact_info['notes'] && @contact_info['notes']['text'] %>
+He/She has the following inquiry: 
+<%= @contact_info['notes']['text']%>
+<% end %>
+
+Please contact him/her with the following contact info:
+Name:  <%= @contact_info['parent_first_name'] + ", " + @contact_info['parent_last_name'] %>
+Phone Number: <%= @contact_info['phone_number'] %>
+Email Address: <%= @contact_info['email_address'] %>
+
+---------------
+ABLS Internal
+www.alphabetaschool.org
+<%= Time.now.strftime("%m-%d-%Y %H:%M:%S") %>
+---------------
