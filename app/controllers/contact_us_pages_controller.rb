@@ -21,7 +21,7 @@ class ContactUsPagesController < ApplicationController
     if @valid
       Notifier.contact_us_email(params).deliver
     else
-      flash[:flash_alert] = "Not all of the required fields are filled in!"
+      flash[:flash_alert] = "Please fill in all of the required fields!"
       redirect_to new_contact_us_page_path
     end
   end
