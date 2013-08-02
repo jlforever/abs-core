@@ -48,6 +48,9 @@ AbsCore::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
   
+  # set default url options for prod to point to the actual host
+  config.action_mailer.default_url_options = { :host => 'abs-core.herokuapp.com' }
+  
   # send mail.
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
