@@ -8,6 +8,9 @@ AbsCore::Application.routes.draw do
   resources :contact_us_pages do
   end
   
+  resources :program_pages do
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

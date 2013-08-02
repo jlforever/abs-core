@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def loading_menu_options
     @menu_options ||= { 
       "HOME" => root_path,
-      "PROGRAMS" => "#",
+      "PROGRAMS" => program_pages_path,
       "REGISTRATION" => registration_pages_path,
       "TESTIMONIAL" => "#",
       "CONTACT US" => new_contact_us_page_path

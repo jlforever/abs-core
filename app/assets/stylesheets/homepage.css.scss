@@ -34,6 +34,27 @@
 	line-height:1.6em;
 }
 
+#hpage_featured .left_float_pg{
+	display:block;
+	float:left;
+	padding:2px 2px 2px 2px;
+	width:900px;
+	height:450px;
+	line-height:1.6em;
+}
+
+#hpage_featured .left_float_pg h1{
+	color:#D54F02;
+	font-size:20px;
+	padding: 0 0 8px 0;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+#hpage_featured .left_float_pg p{
+	color:#475D5D;
+	font-size:14px;
+}
+
 #hpage_featured .left_float_cs .cs_form_container{
 	margin-top: -12px;
 	margin-left:6px; 
