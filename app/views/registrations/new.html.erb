@@ -1,0 +1,64 @@
+<div class="wrapper row2">
+	<div id="hpage_featured" class="clear">
+		<div class="left_float_reg clear">
+			<div class="reg_form_container">
+				<%= form_for(@registration) do |f| %>
+					<h1>The Language Journey Starts Here!</h1>
+					<%= f.label 'Please select a class Level'%>:<br/><br/>
+					<% @class_levels.each do |k, v| %>
+						&nbsp;&nbsp;<%= f.radio_button :class_level, k %><%= f.label :class_level, k + " " + v %><br/>
+					<% end %><br/>
+					
+					<%= f.label :child_first_name, 'Child First Name (required)' %>:
+					<%= f.text_field :child_first_name %><br />
+					<%= f.label :child_last_name, 'Child Last Name (required)' %>:
+					<%= f.text_field :child_last_name %><br />
+					<%= f.label :child_nick_name, 'Child Nick Name' %>:
+					<%= f.text_field :child_nick_name %><br />
+					<%= f.label :child_dob, 'Child Date of Birth (required)'%>:
+					<%= f.date_select :child_dob, :start_year => @default_start_year %><br /><br/>
+					<%= f.label :parent_first_name, 'Parent First Name (required)'%>:
+					<%= f.text_field :parent_first_name %><br />
+					<%= f.label :parent_last_name, 'Parent Last Name (required)'%>:
+					<%= f.text_field :parent_last_name %><br />
+					<%= f.label :parent_day_phone, "Parent Daytime Phone (required)"%>:
+					<%= f.text_field :parent_day_phone %><br/>
+					<%= f.label :parent_cell_phone, "Parent Cell Phone (required)"%>:
+					<%= f.text_field :parent_cell_phone %><br />
+					<%= f.label :parent_email, "Email Address (required)"%>:
+					<%= f.text_field :parent_email%><br/><br/>
+					<%= f.label :address1, 'Address1'%>:
+					<%= f.text_field :address1%><br />
+					<%= f.label :address2, 'Address2'%>:
+					<%= f.text_field :address2 %><br />
+					<%= f.label :city, 'City'%>:
+					<%= f.text_field :city, :size => 12 %>
+					<%= f.label :state, 'State' %>:
+					<%= f.select :state, us_states %>
+					<%= f.label :zip, 'Zip-Code'%>:
+					<%= f.text_field :zip, :size => 9 %><br/><br/>
+					<%= f.label :emergency_contact_name, "Emergency Contact Person"%>:
+					<%= f.text_field :emergency_contact_name %><br/>
+					<%= f.label :emergency_contact_phone, "Emergency Contact Phone"%>:
+					<%= f.text_field :emergency_contact_phone %><br/>
+					<%= f.label :authorized_picked_up_by, "Authorized Picked up By"%>:
+					<%= f.text_field :authorized_picked_up_by %><br/><br/>
+					
+					<%= f.label "How did you hear about us?" %><br/><br/>
+					<% counter = 1 %>
+					<% @hear_about_us_options.each do |h_option| %>
+						&nbsp;&nbsp;<%= f.radio_button :heard_from, h_option %><%= f.label :class_level, h_option %>
+						<% if counter % 3 == 0 %>
+							<br />
+						<% end %>
+						<% counter = counter + 1 %>
+					<% end %><br/><br/>
+					
+					<%= f.submit "Submit" %>
+					<%= f.submit "Clear Form", :type => :reset %>
+				<% end %>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>

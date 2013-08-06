@@ -2,7 +2,7 @@ AbsCore::Application.routes.draw do
   
   root :to => "pages#index"
   
-  resources :registration_pages do
+  resources :registrations do
   end
   
   resources :contact_us_pages do

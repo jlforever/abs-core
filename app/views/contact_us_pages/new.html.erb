@@ -3,7 +3,7 @@
 		<div class="left_float_cs clear">
 			<div class="cs_form_container">
 				<%= form_tag(contact_us_pages_path, :method => "post", :id => 'cs_form') do %>
-					<h1>Let your kid try a new language!</h1>
+					<h1>Let Your Kid Try A New Language!</h1>
 					<%= "I am interested in: " %><br/><br/>
 					<% @interests.each do |interest| %>
 						<%= radio_button_tag 'picked_interest', interest.to_s.html_safe %>
