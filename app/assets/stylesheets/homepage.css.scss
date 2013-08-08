@@ -1,3 +1,8 @@
+.inline-errors {
+	display:inline;
+	font-size:10px;
+	color:red;
+}
 #hpage_featured{
 	position:relative;
 	margin:0 auto 0;
@@ -43,15 +48,16 @@
 	display:block;
 	float:left;
 	width:580px;
-	height:700px;
+	height:760px;
 	line-height:1.6em;
 }
 
 #hpage_featured .left_float_reg .reg_form_container{
-	margin-top: -12px;
+	margin-top: -10px;
 	margin-left:6px; 
 	color:#000000; 
 	background:#EED49E;
+	padding-top:10px;
 	-moz-border-radius:8px; 
 	-webkit-border-radius: 8px;
 }
@@ -163,17 +169,34 @@
 }
 
 #new_registration{
-	padding:12px 12px 12px 12px;
+	padding: auto;
 }
 
 #new_registration label{
-	font-size:14px;
+	font-size:15px;
 	font-family: Garamond;
 }
 
 #new_registration h1{
 	color:#D54F02;
 	font-size:22px;
+	margin-left:45px;
+}
+
+.formtastic fieldset {
+  border:0;
+}
+
+.formtastic ol {
+	list-style:none;
+}
+
+.formtastic .action{
+	display:inline;
+}
+
+.formtastic .choices{
+	margin-left:-12px;
 }
 
 #hpage_featured .left_float h1 #hpage_featured .left_float h2 #hpage_featured .left_float h3 {

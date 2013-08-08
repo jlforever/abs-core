@@ -1,0 +1,29 @@
+<%= semantic_form_for @registration do |f| %>
+  <h1>The Language Journey Starts Here!</h1>
+  <%= f.inputs do %>
+	<%= f.input :class_level, :as => :radio, :label => "Choose class level:", :collection => @class_levels %><br/>
+    <%= f.input :child_first_name %>
+    <%= f.input :child_last_name %>
+	<%= f.input :child_nick_name %>
+	<%= f.input :child_dob, :as => :date_picker, :label => "Child Date Of Birth" %><br/>
+    <%= f.input :parent_first_name %>
+    <%= f.input :parent_last_name %>
+    <%= f.input :parent_email %>
+    <%= f.input :parent_day_phone, :as => :phone %>
+	<%= f.input :parent_cell_phone, :as => :phone %><br/>
+	<%= f.input :address1 %>
+	<%= f.input :address2 %>
+	<%= f.input :city %>
+	<%= f.input :state, :as => :select, :collection => us_states %>
+	<%= f.input :zip %><br/>
+	<%= f.input :emergency_contact_name %>
+	<%= f.input :emergency_contact_phone %>
+	<%= f.input :authorized_picked_up_by %><br/>
+	<%= f.input :heard_from, :as => :select, :label => "How did you find us? ", :collection => @hear_about_us_options %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input, :label => "Create Registration" %>
+	<%= f.action :reset, :label => "Clear Form" %>
+  <% end %>
+<% end %>
