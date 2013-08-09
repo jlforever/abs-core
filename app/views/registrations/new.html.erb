@@ -5,6 +5,30 @@
 				<%= render 'form' %>
 			</div>
 		</div>
+		<div class="right_float_reg_top">
+			<h2>Why Do We Standout?</h2>
+			<ul>
+				<% @intro_texts.each do |text| %>
+					<li><%= text %></li>
+				<% end %>
+			</ul>
+			<br/>
+			<h2>Latest Session Schedule:</h2>
+			<ul>
+				<% @date_time.each do |dt| %>
+					<li><%= dt %></li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="right_float_reg_top">
+			<h2>Join Us For The Fun Ride!</h2>
+			<div style="margin:27px 12px 12px 12px;">
+				<%= image_tag("/assets/happy-kids-learning.jpg")%>
+			</div>
+		</div>
+		<div class="health_sec">
+			<p>Please attach a note, describing any special needs (medical, behavioral, emotional, etc.) and/or allergies. Please note that no nurse is on duty during Alpha Beta classes, and that staff have no access to IEPs or medications including epi-pens and inhalers</p>
+		</div>
 		</div>
 	</div>
 </div>

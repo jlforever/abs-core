@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     @menu_options ||= { 
       "HOME" => root_path,
       "PROGRAMS" => program_pages_path,
-      "REGISTRATION" => registrations_path,
+      "REGISTRATION" => new_registration_path,
       "TESTIMONIAL" => "#",
       "CONTACT US" => new_contact_us_page_path
     }

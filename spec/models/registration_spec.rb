@@ -8,10 +8,17 @@ describe Registration do
       expect {
         Registration.create!(:child_first_name => reg.child_first_name, 
           :child_last_name => reg.child_last_name,
+          :class_level => reg.class_level,
           :parent_first_name => reg.parent_first_name,
           :parent_last_name => 'Blah',
+          :address1 => reg.address1,
+          :address2 => reg.address2,
+          :city => reg.city,
+          :state => reg.state,
+          :zip => reg.zip,
           :child_dob => Time.now - 6.years,
           :parent_email => reg.parent_email,
+          :emergency_contact_phone => reg.emergency_contact_phone,
           :parent_day_phone => reg.parent_day_phone,
           :parent_cell_phone => reg.parent_cell_phone)
       }.to raise_error
@@ -20,10 +27,17 @@ describe Registration do
     it "proceeds to create the registration with variation of child's first name" do
       Registration.create!(:child_first_name => "SomeFirstName", 
         :child_last_name => reg.child_last_name,
+        :class_level => reg.class_level,
         :parent_first_name => reg.parent_first_name,
         :parent_last_name => 'Blah',
+        :address1 => reg.address1,
+        :address2 => reg.address2,
+        :city => reg.city,
+        :state => reg.state,
+        :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
       Registration.count.should == 2
@@ -32,10 +46,17 @@ describe Registration do
     it "proceeds to create the registration with variation of child's last name" do
       Registration.create!(:child_first_name => reg.child_first_name, 
         :child_last_name => "SomeLastName",
+        :class_level => reg.class_level,
         :parent_first_name => reg.parent_first_name,
         :parent_last_name => 'Blah',
+        :address1 => reg.address1,
+        :address2 => reg.address2,
+        :city => reg.city,
+        :state => reg.state,
+        :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
       Registration.count.should == 2
@@ -44,10 +65,17 @@ describe Registration do
     it "proceeds to create the registration with variation of parent's first name" do
       Registration.create!(:child_first_name => reg.child_first_name, 
         :child_last_name => reg.child_last_name,
+        :class_level => reg.class_level,
         :parent_first_name => "SomeParentFirstName",
         :parent_last_name => 'Blah',
+        :address1 => reg.address1,
+        :address2 => reg.address2,
+        :city => reg.city,
+        :state => reg.state,
+        :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
       Registration.count.should == 2
@@ -104,6 +132,41 @@ describe Registration do
           :parent_day_phone => "123.4563-6896",
           :parent_cell_phone => reg.parent_cell_phone)
       }.to raise_error
+    end
+  end
+  
+  describe ".fee" do
+    it "specifies the session fee" do
+      Registration.fee.should == Registration::FileHelpers.parse_reg_fee
+    end
+  end
+  
+  describe "#created_registration_email" do
+    
+    let(:mail1) { mock(Mail::Message) }
+    
+    before(:each) do
+      mail1.stub(:deliver)
+    end
+    
+    it "calls notifier to mail out registration confirmation email" do
+      Notifier.should_receive(:send_registration_confirmation_email).
+        and_return(mail1)
+      Registration.create!(:child_first_name => reg.child_first_name, 
+        :child_last_name => reg.child_last_name,
+        :class_level => reg.class_level,
+        :parent_first_name => "SomeParentFirstName",
+        :parent_last_name => 'Blah',
+        :address1 => reg.address1,
+        :address2 => reg.address2,
+        :city => reg.city,
+        :state => reg.state,
+        :zip => reg.zip,
+        :child_dob => Time.now - 6.years,
+        :parent_email => reg.parent_email,
+        :emergency_contact_phone => reg.emergency_contact_phone,
+        :parent_day_phone => reg.parent_day_phone,
+        :parent_cell_phone => reg.parent_cell_phone)
     end
   end
 end

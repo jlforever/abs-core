@@ -1,6 +1,7 @@
 FactoryGirl.define do
   
   factory :registration, :class => Registration do
+    class_level 'Beginner Panda Group'
     child_first_name 'John'
     child_last_name 'Greene'
     parent_first_name 'Mary'
@@ -9,6 +10,11 @@ FactoryGirl.define do
     parent_email 'mary.greene@example.com'
     parent_day_phone '123-456-7890'
     parent_cell_phone '456-789-0000'
+    address1 "1 Main Street"
+    city "SomeCity"
+    state "SomeState"
+    zip "12345"
+    emergency_contact_phone "1235468790"
   end
   
 end

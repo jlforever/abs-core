@@ -44,12 +44,50 @@
 	line-height:1.6em;
 }
 
+#hpage_featured .right_float_reg_top{
+	display:block;
+	float:right;
+	width:435px;
+	height:350px;
+	line-height:1.5em;
+}
+
+#hpage_featured .right_float_reg_top h2 {
+	color:#D54F02;
+	padding-left:20px;
+	font-size:18px;
+}
+
+#hpage_featured .right_float_reg_top ul {
+	list-style: square url("/assets/icon-bullet-large.png")
+}
+
+#hpage_featured .right_float_reg_top ul li {
+	margin-left:-6px;
+	font-size:14.4px;
+	color:#0D440E;
+	font-family:proxima-nova, Garamond, Serif;
+	line-height:1.4em;
+}
+
 #hpage_featured .left_float_reg{
 	display:block;
 	float:left;
-	width:580px;
-	height:760px;
-	line-height:1.6em;
+	width:515px;
+	height:750px;
+	line-height:1.65em;
+}
+
+#hpage_featured .health_sec{
+	clear:both; 
+	margin-left:17px; 
+	color:#B60000; 
+	margin-top:1px;
+	text-decoration:bold;
+}
+
+#hpage_featured .health_sec p{
+	font-size:12.5px;
 }
 
 #hpage_featured .left_float_reg .reg_form_container{
@@ -58,6 +96,7 @@
 	color:#000000; 
 	background:#EED49E;
 	padding-top:10px;
+	padding-bottom:2px;
 	-moz-border-radius:8px; 
 	-webkit-border-radius: 8px;
 }

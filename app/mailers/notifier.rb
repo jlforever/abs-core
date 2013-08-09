@@ -18,4 +18,12 @@ class Notifier < ActionMailer::Base
   end
   private :build_to_address
 
+  def send_registration_confirmation_email(to_address, parent_first_name, reg_created_date)
+    @parent_first_name = parent_first_name
+    @reg_created_valid_until = (reg_created_date + 2.week).strftime("%m-%d-%Y %H:%M:%S")
+    mail(:to => to_address,
+      :from => 'info@alphabetaschool.org',
+      :subject => 'Thank you for registering with ABLS')
+  end
+  
 end

@@ -1,0 +1,22 @@
+<div class="wrapper row2">
+	<div id="hpage_featured" class="clear">
+		<div class="left_float clear">
+			<ul>
+				<% @intro_texts.each do |text| %>
+					<li><%= text %></li>
+				<% end %>
+			</ul>
+			<ul>
+				<% @date_time.each do |dt| %>
+					<li><%= dt %></li>
+				<% end %>
+			</ul>
+			
+			<h3>Please use the following link to download the registration form:</h3>
+			<p><%= link_to("Click Here To Download", @registration_form_link, :target => "_blank") %></p>
+			<h3>Please use the following link to download the free class enrollment form:</h3>
+			<p><%= link_to("Click Here To Download", @free_class_registration_form_link, :target => "_blank")%></p>
+			</div>
+		</div>
+	</div>
+</div>
