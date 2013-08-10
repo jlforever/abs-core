@@ -1,6 +1,6 @@
 .inline-errors {
 	display:inline;
-	font-size:10px;
+	font-size:8.5px;
 	color:red;
 }
 #hpage_featured{
@@ -47,7 +47,7 @@
 #hpage_featured .right_float_reg_top{
 	display:block;
 	float:right;
-	width:435px;
+	width:415px;
 	height:350px;
 	line-height:1.5em;
 }
@@ -73,16 +73,16 @@
 #hpage_featured .left_float_reg{
 	display:block;
 	float:left;
-	width:515px;
-	height:780px;
-	line-height:1.65em;
+	width:530px;
+	height:795px;
+	line-height:1.50em;
 }
 
 #hpage_featured .health_sec{
 	clear:both; 
 	margin-left:17px; 
 	color:#B60000; 
-	margin-top:8px;
+	margin-top:4px;
 	text-decoration:bold;
 }
 
@@ -218,8 +218,9 @@
 
 #new_registration h1{
 	color:#D54F02;
-	font-size:22px;
+	font-size:21px;
 	margin-left:45px;
+	margin-bottom:-3px;
 }
 
 .formtastic fieldset {

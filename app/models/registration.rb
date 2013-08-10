@@ -37,7 +37,7 @@ class Registration < ActiveRecord::Base
   
   validates :parent_email, :format => {
     :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/,
-    :message => "Incorrect email format!"
+    :message => "check format!"
   }
   
   after_save :created_registration_email
