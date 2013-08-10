@@ -27,17 +27,17 @@ class Registration < ActiveRecord::Base
   #
   validates :parent_day_phone, :format => {
     :with => /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
-    :message => "can't be blank, check format!"
+    :message => "can't be blank, check format"
   }
 
   validates :parent_cell_phone, :format => {
     :with => /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
-    :message => "can't be blank, check format!"
+    :message => "can't be blank, check format"
   }
   
   validates :parent_email, :format => {
     :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/,
-    :message => "check format!"
+    :message => "check format"
   }
   
   after_save :created_registration_email

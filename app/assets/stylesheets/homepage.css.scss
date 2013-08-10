@@ -75,7 +75,7 @@
 	float:left;
 	width:520px;
 	height:790px;
-	line-height:1.58em;
+	line-height:1.45em;
 }
 
 #hpage_featured .health_sec{
@@ -87,15 +87,15 @@
 }
 
 #hpage_featured .health_sec p{
-	font-size:12.5px;
+	font-size:11.5px;
 }
 
 #hpage_featured .left_float_reg .reg_form_container{
-	margin-top: -10px;
+	margin-top: -8px;
 	margin-left:4px; 
 	color:#000000; 
 	background:#EED49E;
-	padding-top:10px;
+	padding-top:8px;
 	padding-bottom:2px;
 	-moz-border-radius:8px; 
 	-webkit-border-radius: 8px;
@@ -226,6 +226,10 @@
   border:0;
 }
 
+.formtastic .inputs {
+	margin-top : -5px;
+}
+
 .formtastic ol {
 	list-style:none;
 }
@@ -235,7 +239,7 @@
 }
 
 .formtastic .choices{
-	margin-left:-12px;
+	margin-left:-10px;
 }
 
 #hpage_featured .left_float h1 #hpage_featured .left_float h2 #hpage_featured .left_float h3 {
