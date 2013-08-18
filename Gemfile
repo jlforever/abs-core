@@ -16,6 +16,8 @@ gem 'memcachier'
 gem 'dalli'
 gem 'devise'
 gem 'cancan'
+gem 'prawn'
+gem 'hypdf'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,4 +39,5 @@ group :development, :test do
   gem 'spork'
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
+  gem 'foreman'
 end
