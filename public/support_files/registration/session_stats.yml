@@ -1,2 +1,11 @@
-summer_2013: 2013-07-22:2013-08-22
-fall_2013: 2013-09-03:203-12-20
+summer_2013: 
+    start_date: 2013-07-22
+    end_date: 2013-08-22
+    panda: 250
+    star: 275
+    
+fall_2013: 
+    start_date: 2013-09-03
+    end_date: 203-12-20
+    panda: 375
+    star: 375

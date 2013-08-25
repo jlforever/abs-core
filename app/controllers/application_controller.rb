@@ -2,6 +2,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   before_filter :loading_menu_options
+  before_filter :load_connections_links
+  
+  def load_connections_links
+    @facebook_link = "https://www.facebook.com/abls.abls.1"
+    @twitter_link = "https://twitter.com/ABLS3"
+    @youtube_link = "http://www.youtube.com/channel/UCzEufCsJkU6JbB4WrtADSsQ"
+  end
   
   def loading_menu_options
     @menu_options ||= { 
