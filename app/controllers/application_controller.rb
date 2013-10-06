@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_connections_links
   
   def load_connections_links
-    @facebook_link = "https://www.facebook.com/abls.abls.1"
+    @facebook_link = "https://www.facebook.com/pages/Alpha-Beta-Language-School/706702632687129"
     @twitter_link = "https://twitter.com/ABLS3"
     @youtube_link = "http://www.youtube.com/channel/UCzEufCsJkU6JbB4WrtADSsQ"
   end
