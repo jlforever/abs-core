@@ -187,7 +187,7 @@
   margin: 0 auto 0;
   display: block;
   width: 960px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 /* line 14, ../../app/assets/stylesheets/homepage.css.scss */
@@ -929,14 +929,25 @@ div.wrapper p {
   margin: 5px 50px 0 0;
 }
 
+/* line 93, ../../app/assets/stylesheets/layout.css.scss */
+#header .fl_middle p {
+  float: left;
+  margin-top: 50px;
+  margin-left: 10px;
+  font-size: 40px;
+  font-variant: small-caps;
+  font-style: normal;
+  color: #000080;
+}
+
 /* ----------------------------------------------Content-------------------------------------*/
-/* line 96, ../../app/assets/stylesheets/layout.css.scss */
+/* line 105, ../../app/assets/stylesheets/layout.css.scss */
 #container {
   padding: 30px 0;
   line-height: 1.6em;
 }
 
-/* line 98, ../../app/assets/stylesheets/layout.css.scss */
+/* line 107, ../../app/assets/stylesheets/layout.css.scss */
 #container h1, #container h2, #container h3, #container h4, #container h5, #container h6 {
   background-color: #FFFFFF;
   margin: 0 0 15px 0;
@@ -944,7 +955,7 @@ div.wrapper p {
   border-bottom: 1px solid #D8D8D8;
 }
 
-/* line 105, ../../app/assets/stylesheets/layout.css.scss */
+/* line 114, ../../app/assets/stylesheets/layout.css.scss */
 #container .readmore {
   display: block;
   width: 100%;
@@ -952,7 +963,7 @@ div.wrapper p {
   line-height: normal;
 }
 
-/* line 112, ../../app/assets/stylesheets/layout.css.scss */
+/* line 121, ../../app/assets/stylesheets/layout.css.scss */
 #content {
   display: block;
   float: left;
@@ -960,66 +971,66 @@ div.wrapper p {
 }
 
 /* ------Comments-----*/
-/* line 120, ../../app/assets/stylesheets/layout.css.scss */
+/* line 129, ../../app/assets/stylesheets/layout.css.scss */
 #comments {
   margin-bottom: 40px;
 }
 
-/* line 122, ../../app/assets/stylesheets/layout.css.scss */
+/* line 131, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist {
   margin: 0;
   padding: 0;
 }
 
-/* line 124, ../../app/assets/stylesheets/layout.css.scss */
+/* line 133, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 126, ../../app/assets/stylesheets/layout.css.scss */
+/* line 135, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_odd, #comments .commentlist li.comment_even {
   margin: 0 0 10px 0;
   padding: 15px;
   list-style: none;
 }
 
-/* line 128, ../../app/assets/stylesheets/layout.css.scss */
+/* line 137, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_odd {
   color: #666666;
   background-color: #F7F7F7;
 }
 
-/* line 129, ../../app/assets/stylesheets/layout.css.scss */
+/* line 138, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_odd a {
   color: #896C50;
   background-color: #F7F7F7;
 }
 
-/* line 131, ../../app/assets/stylesheets/layout.css.scss */
+/* line 140, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_even {
   color: #666666;
   background-color: #E8E8E8;
 }
 
-/* line 132, ../../app/assets/stylesheets/layout.css.scss */
+/* line 141, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_even a {
   color: #896C50;
   background-color: #E8E8E8;
 }
 
-/* line 134, ../../app/assets/stylesheets/layout.css.scss */
+/* line 143, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist .author .name {
   font-weight: bold;
 }
 
-/* line 135, ../../app/assets/stylesheets/layout.css.scss */
+/* line 144, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist .submitdate {
   font-size: smaller;
 }
 
-/* line 137, ../../app/assets/stylesheets/layout.css.scss */
+/* line 146, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist p {
   margin: 10px 5px 10px 0;
   padding: 0;
@@ -1027,7 +1038,7 @@ div.wrapper p {
   text-transform: none;
 }
 
-/* line 139, ../../app/assets/stylesheets/layout.css.scss */
+/* line 148, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li .avatar {
   float: right;
   border: 1px solid #EEEEEE;
@@ -1035,21 +1046,21 @@ div.wrapper p {
 }
 
 /* ----------------------------------------------Column-------------------------------------*/
-/* line 143, ../../app/assets/stylesheets/layout.css.scss */
+/* line 152, ../../app/assets/stylesheets/layout.css.scss */
 #column {
   display: block;
   float: right;
   width: 300px;
 }
 
-/* line 149, ../../app/assets/stylesheets/layout.css.scss */
+/* line 158, ../../app/assets/stylesheets/layout.css.scss */
 #column .holder, #column #featured {
   display: block;
   width: 300px;
   margin-bottom: 30px;
 }
 
-/* line 155, ../../app/assets/stylesheets/layout.css.scss */
+/* line 164, ../../app/assets/stylesheets/layout.css.scss */
 #column .holder h2.title {
   display: block;
   width: 100%;
@@ -1062,7 +1073,7 @@ div.wrapper p {
   border-bottom: 1px dotted #999999;
 }
 
-/* line 167, ../../app/assets/stylesheets/layout.css.scss */
+/* line 176, ../../app/assets/stylesheets/layout.css.scss */
 #column .holder h2.title img {
   float: left;
   margin: -15px 8px 0 0;
@@ -1070,14 +1081,14 @@ div.wrapper p {
   border: 1px solid #999999;
 }
 
-/* line 174, ../../app/assets/stylesheets/layout.css.scss */
+/* line 183, ../../app/assets/stylesheets/layout.css.scss */
 #column div.imgholder {
   display: block;
   width: 290px;
   margin: 0 0 10px 0;
 }
 
-/* line 180, ../../app/assets/stylesheets/layout.css.scss */
+/* line 189, ../../app/assets/stylesheets/layout.css.scss */
 #column .holder p.readmore {
   display: block;
   width: 100%;
@@ -1087,7 +1098,7 @@ div.wrapper p {
 }
 
 /* Featured Block */
-/* line 190, ../../app/assets/stylesheets/layout.css.scss */
+/* line 199, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured ul, #column #featured h2, #column #featured p {
   margin: 0;
   padding: 0;
@@ -1096,13 +1107,13 @@ div.wrapper p {
   background-color: #F7F7F7;
 }
 
-/* line 198, ../../app/assets/stylesheets/layout.css.scss */
+/* line 207, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured a {
   color: #896C50;
   background-color: #F7F7F7;
 }
 
-/* line 203, ../../app/assets/stylesheets/layout.css.scss */
+/* line 212, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured li {
   display: block;
   width: 250px;
@@ -1112,7 +1123,7 @@ div.wrapper p {
   background-color: #F7F7F7;
 }
 
-/* line 212, ../../app/assets/stylesheets/layout.css.scss */
+/* line 221, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured li p.imgholder {
   display: block;
   width: 240px;
@@ -1120,7 +1131,7 @@ div.wrapper p {
   margin: 20px 0 15px 0;
 }
 
-/* line 219, ../../app/assets/stylesheets/layout.css.scss */
+/* line 228, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured li h2 {
   margin: 0;
   padding: 0 0 8px 0;
@@ -1130,7 +1141,7 @@ div.wrapper p {
   border-bottom: 1px dotted #999999;
 }
 
-/* line 228, ../../app/assets/stylesheets/layout.css.scss */
+/* line 237, ../../app/assets/stylesheets/layout.css.scss */
 #container #column .readmore a {
   display: block;
   width: 100%;
@@ -1143,7 +1154,7 @@ div.wrapper p {
   background: none;
 }
 
-/* line 240, ../../app/assets/stylesheets/layout.css.scss */
+/* line 249, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews {
   display: block;
   width: 100%;
@@ -1152,7 +1163,7 @@ div.wrapper p {
   list-style: none;
 }
 
-/* line 248, ../../app/assets/stylesheets/layout.css.scss */
+/* line 257, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews li {
   display: block;
   width: 100%;
@@ -1163,17 +1174,17 @@ div.wrapper p {
   overflow: hidden;
 }
 
-/* line 258, ../../app/assets/stylesheets/layout.css.scss */
+/* line 267, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews li.last, #column .last {
   margin-bottom: 0;
 }
 
-/* line 262, ../../app/assets/stylesheets/layout.css.scss */
+/* line 271, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews p {
   display: inline;
 }
 
-/* line 266, ../../app/assets/stylesheets/layout.css.scss */
+/* line 275, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews img {
   float: left;
   margin: 0 10px 0 0;
@@ -1183,7 +1194,7 @@ div.wrapper p {
 }
 
 /* ----------------------------------------------Footer-------------------------------------*/
-/* line 276, ../../app/assets/stylesheets/layout.css.scss */
+/* line 285, ../../app/assets/stylesheets/layout.css.scss */
 #footer {
   line-height: 1.6em;
   background-color: #333333;
@@ -1191,13 +1202,13 @@ div.wrapper p {
   height: 250px;
 }
 
-/* line 283, ../../app/assets/stylesheets/layout.css.scss */
+/* line 292, ../../app/assets/stylesheets/layout.css.scss */
 #footer a {
   color: #979797;
   background-color: #333333;
 }
 
-/* line 288, ../../app/assets/stylesheets/layout.css.scss */
+/* line 297, ../../app/assets/stylesheets/layout.css.scss */
 #footer h2 {
   color: #FFFFFF;
   background-color: #333333;
@@ -1205,20 +1216,20 @@ div.wrapper p {
   font-style: normal;
 }
 
-/* line 295, ../../app/assets/stylesheets/layout.css.scss */
+/* line 304, ../../app/assets/stylesheets/layout.css.scss */
 #footer ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 301, ../../app/assets/stylesheets/layout.css.scss */
+/* line 310, ../../app/assets/stylesheets/layout.css.scss */
 #footer address {
   color: #979797;
   font-style: normal;
 }
 
-/* line 306, ../../app/assets/stylesheets/layout.css.scss */
+/* line 315, ../../app/assets/stylesheets/layout.css.scss */
 #footer .footbox {
   display: block;
   float: left;
@@ -1226,41 +1237,41 @@ div.wrapper p {
   margin-right: 30px;
 }
 
-/* line 313, ../../app/assets/stylesheets/layout.css.scss */
+/* line 322, ../../app/assets/stylesheets/layout.css.scss */
 #footer #social {
   margin-bottom: 20px;
 }
 
-/* line 317, ../../app/assets/stylesheets/layout.css.scss */
+/* line 326, ../../app/assets/stylesheets/layout.css.scss */
 #footer #social ul {
   margin: 20px 0 0 0;
 }
 
-/* line 321, ../../app/assets/stylesheets/layout.css.scss */
+/* line 330, ../../app/assets/stylesheets/layout.css.scss */
 #footer #social li {
   display: inline;
   margin-right: 15px;
 }
 
-/* line 326, ../../app/assets/stylesheets/layout.css.scss */
+/* line 335, ../../app/assets/stylesheets/layout.css.scss */
 #footer .last {
   margin: 0;
 }
 
 /* ----------------------------------------------Copyright-------------------------------------*/
-/* line 330, ../../app/assets/stylesheets/layout.css.scss */
+/* line 339, ../../app/assets/stylesheets/layout.css.scss */
 #copyright {
   padding: 15px 0;
   border-top: 1px solid #979797;
 }
 
-/* line 335, ../../app/assets/stylesheets/layout.css.scss */
+/* line 344, ../../app/assets/stylesheets/layout.css.scss */
 #copyright p {
   margin: 0;
   padding: 0;
 }
 
-/* line 340, ../../app/assets/stylesheets/layout.css.scss */
+/* line 349, ../../app/assets/stylesheets/layout.css.scss */
 #copyright, #copyright a {
   color: #979797;
   background-color: #333333;
@@ -1337,7 +1348,7 @@ div.wrapper p {
   margin: 0 auto 0;
   display: block;
   width: 960px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 /* line 14, ../../app/assets/stylesheets/homepage.css.scss */
@@ -1983,7 +1994,7 @@ div.wrapper p {
   margin: 0 auto 0;
   display: block;
   width: 960px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 /* line 14, ../../app/assets/stylesheets/homepage.css.scss */
@@ -2725,14 +2736,25 @@ div.wrapper p {
   margin: 5px 50px 0 0;
 }
 
+/* line 93, ../../app/assets/stylesheets/layout.css.scss */
+#header .fl_middle p {
+  float: left;
+  margin-top: 50px;
+  margin-left: 10px;
+  font-size: 40px;
+  font-variant: small-caps;
+  font-style: normal;
+  color: #000080;
+}
+
 /* ----------------------------------------------Content-------------------------------------*/
-/* line 96, ../../app/assets/stylesheets/layout.css.scss */
+/* line 105, ../../app/assets/stylesheets/layout.css.scss */
 #container {
   padding: 30px 0;
   line-height: 1.6em;
 }
 
-/* line 98, ../../app/assets/stylesheets/layout.css.scss */
+/* line 107, ../../app/assets/stylesheets/layout.css.scss */
 #container h1, #container h2, #container h3, #container h4, #container h5, #container h6 {
   background-color: #FFFFFF;
   margin: 0 0 15px 0;
@@ -2740,7 +2762,7 @@ div.wrapper p {
   border-bottom: 1px solid #D8D8D8;
 }
 
-/* line 105, ../../app/assets/stylesheets/layout.css.scss */
+/* line 114, ../../app/assets/stylesheets/layout.css.scss */
 #container .readmore {
   display: block;
   width: 100%;
@@ -2748,7 +2770,7 @@ div.wrapper p {
   line-height: normal;
 }
 
-/* line 112, ../../app/assets/stylesheets/layout.css.scss */
+/* line 121, ../../app/assets/stylesheets/layout.css.scss */
 #content {
   display: block;
   float: left;
@@ -2756,66 +2778,66 @@ div.wrapper p {
 }
 
 /* ------Comments-----*/
-/* line 120, ../../app/assets/stylesheets/layout.css.scss */
+/* line 129, ../../app/assets/stylesheets/layout.css.scss */
 #comments {
   margin-bottom: 40px;
 }
 
-/* line 122, ../../app/assets/stylesheets/layout.css.scss */
+/* line 131, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist {
   margin: 0;
   padding: 0;
 }
 
-/* line 124, ../../app/assets/stylesheets/layout.css.scss */
+/* line 133, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 126, ../../app/assets/stylesheets/layout.css.scss */
+/* line 135, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_odd, #comments .commentlist li.comment_even {
   margin: 0 0 10px 0;
   padding: 15px;
   list-style: none;
 }
 
-/* line 128, ../../app/assets/stylesheets/layout.css.scss */
+/* line 137, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_odd {
   color: #666666;
   background-color: #F7F7F7;
 }
 
-/* line 129, ../../app/assets/stylesheets/layout.css.scss */
+/* line 138, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_odd a {
   color: #896C50;
   background-color: #F7F7F7;
 }
 
-/* line 131, ../../app/assets/stylesheets/layout.css.scss */
+/* line 140, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_even {
   color: #666666;
   background-color: #E8E8E8;
 }
 
-/* line 132, ../../app/assets/stylesheets/layout.css.scss */
+/* line 141, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li.comment_even a {
   color: #896C50;
   background-color: #E8E8E8;
 }
 
-/* line 134, ../../app/assets/stylesheets/layout.css.scss */
+/* line 143, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist .author .name {
   font-weight: bold;
 }
 
-/* line 135, ../../app/assets/stylesheets/layout.css.scss */
+/* line 144, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist .submitdate {
   font-size: smaller;
 }
 
-/* line 137, ../../app/assets/stylesheets/layout.css.scss */
+/* line 146, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist p {
   margin: 10px 5px 10px 0;
   padding: 0;
@@ -2823,7 +2845,7 @@ div.wrapper p {
   text-transform: none;
 }
 
-/* line 139, ../../app/assets/stylesheets/layout.css.scss */
+/* line 148, ../../app/assets/stylesheets/layout.css.scss */
 #comments .commentlist li .avatar {
   float: right;
   border: 1px solid #EEEEEE;
@@ -2831,21 +2853,21 @@ div.wrapper p {
 }
 
 /* ----------------------------------------------Column-------------------------------------*/
-/* line 143, ../../app/assets/stylesheets/layout.css.scss */
+/* line 152, ../../app/assets/stylesheets/layout.css.scss */
 #column {
   display: block;
   float: right;
   width: 300px;
 }
 
-/* line 149, ../../app/assets/stylesheets/layout.css.scss */
+/* line 158, ../../app/assets/stylesheets/layout.css.scss */
 #column .holder, #column #featured {
   display: block;
   width: 300px;
   margin-bottom: 30px;
 }
 
-/* line 155, ../../app/assets/stylesheets/layout.css.scss */
+/* line 164, ../../app/assets/stylesheets/layout.css.scss */
 #column .holder h2.title {
   display: block;
   width: 100%;
@@ -2858,7 +2880,7 @@ div.wrapper p {
   border-bottom: 1px dotted #999999;
 }
 
-/* line 167, ../../app/assets/stylesheets/layout.css.scss */
+/* line 176, ../../app/assets/stylesheets/layout.css.scss */
 #column .holder h2.title img {
   float: left;
   margin: -15px 8px 0 0;
@@ -2866,14 +2888,14 @@ div.wrapper p {
   border: 1px solid #999999;
 }
 
-/* line 174, ../../app/assets/stylesheets/layout.css.scss */
+/* line 183, ../../app/assets/stylesheets/layout.css.scss */
 #column div.imgholder {
   display: block;
   width: 290px;
   margin: 0 0 10px 0;
 }
 
-/* line 180, ../../app/assets/stylesheets/layout.css.scss */
+/* line 189, ../../app/assets/stylesheets/layout.css.scss */
 #column .holder p.readmore {
   display: block;
   width: 100%;
@@ -2883,7 +2905,7 @@ div.wrapper p {
 }
 
 /* Featured Block */
-/* line 190, ../../app/assets/stylesheets/layout.css.scss */
+/* line 199, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured ul, #column #featured h2, #column #featured p {
   margin: 0;
   padding: 0;
@@ -2892,13 +2914,13 @@ div.wrapper p {
   background-color: #F7F7F7;
 }
 
-/* line 198, ../../app/assets/stylesheets/layout.css.scss */
+/* line 207, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured a {
   color: #896C50;
   background-color: #F7F7F7;
 }
 
-/* line 203, ../../app/assets/stylesheets/layout.css.scss */
+/* line 212, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured li {
   display: block;
   width: 250px;
@@ -2908,7 +2930,7 @@ div.wrapper p {
   background-color: #F7F7F7;
 }
 
-/* line 212, ../../app/assets/stylesheets/layout.css.scss */
+/* line 221, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured li p.imgholder {
   display: block;
   width: 240px;
@@ -2916,7 +2938,7 @@ div.wrapper p {
   margin: 20px 0 15px 0;
 }
 
-/* line 219, ../../app/assets/stylesheets/layout.css.scss */
+/* line 228, ../../app/assets/stylesheets/layout.css.scss */
 #column #featured li h2 {
   margin: 0;
   padding: 0 0 8px 0;
@@ -2926,7 +2948,7 @@ div.wrapper p {
   border-bottom: 1px dotted #999999;
 }
 
-/* line 228, ../../app/assets/stylesheets/layout.css.scss */
+/* line 237, ../../app/assets/stylesheets/layout.css.scss */
 #container #column .readmore a {
   display: block;
   width: 100%;
@@ -2939,7 +2961,7 @@ div.wrapper p {
   background: none;
 }
 
-/* line 240, ../../app/assets/stylesheets/layout.css.scss */
+/* line 249, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews {
   display: block;
   width: 100%;
@@ -2948,7 +2970,7 @@ div.wrapper p {
   list-style: none;
 }
 
-/* line 248, ../../app/assets/stylesheets/layout.css.scss */
+/* line 257, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews li {
   display: block;
   width: 100%;
@@ -2959,17 +2981,17 @@ div.wrapper p {
   overflow: hidden;
 }
 
-/* line 258, ../../app/assets/stylesheets/layout.css.scss */
+/* line 267, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews li.last, #column .last {
   margin-bottom: 0;
 }
 
-/* line 262, ../../app/assets/stylesheets/layout.css.scss */
+/* line 271, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews p {
   display: inline;
 }
 
-/* line 266, ../../app/assets/stylesheets/layout.css.scss */
+/* line 275, ../../app/assets/stylesheets/layout.css.scss */
 #column .latestnews img {
   float: left;
   margin: 0 10px 0 0;
@@ -2979,7 +3001,7 @@ div.wrapper p {
 }
 
 /* ----------------------------------------------Footer-------------------------------------*/
-/* line 276, ../../app/assets/stylesheets/layout.css.scss */
+/* line 285, ../../app/assets/stylesheets/layout.css.scss */
 #footer {
   line-height: 1.6em;
   background-color: #333333;
@@ -2987,13 +3009,13 @@ div.wrapper p {
   height: 250px;
 }
 
-/* line 283, ../../app/assets/stylesheets/layout.css.scss */
+/* line 292, ../../app/assets/stylesheets/layout.css.scss */
 #footer a {
   color: #979797;
   background-color: #333333;
 }
 
-/* line 288, ../../app/assets/stylesheets/layout.css.scss */
+/* line 297, ../../app/assets/stylesheets/layout.css.scss */
 #footer h2 {
   color: #FFFFFF;
   background-color: #333333;
@@ -3001,20 +3023,20 @@ div.wrapper p {
   font-style: normal;
 }
 
-/* line 295, ../../app/assets/stylesheets/layout.css.scss */
+/* line 304, ../../app/assets/stylesheets/layout.css.scss */
 #footer ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 301, ../../app/assets/stylesheets/layout.css.scss */
+/* line 310, ../../app/assets/stylesheets/layout.css.scss */
 #footer address {
   color: #979797;
   font-style: normal;
 }
 
-/* line 306, ../../app/assets/stylesheets/layout.css.scss */
+/* line 315, ../../app/assets/stylesheets/layout.css.scss */
 #footer .footbox {
   display: block;
   float: left;
@@ -3022,41 +3044,41 @@ div.wrapper p {
   margin-right: 30px;
 }
 
-/* line 313, ../../app/assets/stylesheets/layout.css.scss */
+/* line 322, ../../app/assets/stylesheets/layout.css.scss */
 #footer #social {
   margin-bottom: 20px;
 }
 
-/* line 317, ../../app/assets/stylesheets/layout.css.scss */
+/* line 326, ../../app/assets/stylesheets/layout.css.scss */
 #footer #social ul {
   margin: 20px 0 0 0;
 }
 
-/* line 321, ../../app/assets/stylesheets/layout.css.scss */
+/* line 330, ../../app/assets/stylesheets/layout.css.scss */
 #footer #social li {
   display: inline;
   margin-right: 15px;
 }
 
-/* line 326, ../../app/assets/stylesheets/layout.css.scss */
+/* line 335, ../../app/assets/stylesheets/layout.css.scss */
 #footer .last {
   margin: 0;
 }
 
 /* ----------------------------------------------Copyright-------------------------------------*/
-/* line 330, ../../app/assets/stylesheets/layout.css.scss */
+/* line 339, ../../app/assets/stylesheets/layout.css.scss */
 #copyright {
   padding: 15px 0;
   border-top: 1px solid #979797;
 }
 
-/* line 335, ../../app/assets/stylesheets/layout.css.scss */
+/* line 344, ../../app/assets/stylesheets/layout.css.scss */
 #copyright p {
   margin: 0;
   padding: 0;
 }
 
-/* line 340, ../../app/assets/stylesheets/layout.css.scss */
+/* line 349, ../../app/assets/stylesheets/layout.css.scss */
 #copyright, #copyright a {
   color: #979797;
   background-color: #333333;

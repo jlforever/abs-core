@@ -1,11 +1,15 @@
 <div id="header" class="clear">
 	<div class="fl_left">
-		<%#= image_tag("/assets/abs-school-logo.png", :width => 385, :height => 93) %>
-		<h1><%= "Alpha Beta Language School"%></h1>
-		<p><%= "Start Early! Start Wise!"%></p>
+		<%= link_to root_path do %>
+		  <%= image_tag("/assets/ab-2-1.png", :width => 150, :height => 125) %>
+		<% end %>
+		<!-- <p style="margin-left:16px;"><%#= "Start Early! Start Wise!"%></p> -->
     </div>
 
-	<div class="fl_right">
-		<p style="font-size:13px;"><%= link_to("Learn About A Free Class", new_contact_us_page_path) %> | <a href="#">Login</a></p>
+	<div class="fl_middle">
+		<p>Alpha Beta Language School</p>
+	</div>
+	<div class="fl_right" style="margin-top:25px; margin-right: -45px;">
+		<p style="font-size:13px;"><%= link_to("Learn About Free Class", new_contact_us_page_path) %> | <a href="#">Login</a></p>
 	</div>
 </h1>
