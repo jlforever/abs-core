@@ -9,6 +9,7 @@ gem 'pg'
 gem 'rake', '>= 0.9.2.2', :require => false
 gem 'unicorn'
 gem 'jquery-rails'
+gem 'fancybox2-rails', '~> 0.2.4'
 gem 'coffee-rails', '~> 3.1.1'
 gem 'aws-sdk'
 gem 'formtastic'

@@ -6,6 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require document_ready
+//= require fancybox
 //= require_tree .
-
 //= require util

@@ -13,6 +13,8 @@ AbsCore::Application.routes.draw do
   resources :program_pages do
   end
   
+  resources :testimonials, only: [:index]
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -44,6 +44,29 @@
 	line-height:1.6em;
 }
 
+#hpage_featured .left_float_testimonial{
+	display:block;
+	float:left;
+	width:450px;
+	height:360px;
+	line-height:1.45em;
+}
+
+#hpage_featured .right_float_testimonial{
+	display:block;
+	float:right;
+	width:480px;
+	height:360px;
+	line-height:1.5em;
+	color: #0D440E;
+}
+
+#hpage_featured .bottom_float_testimonial {
+	clear: both;
+	margin-left: 8px;
+	width: 100%;
+}
+
 #hpage_featured .right_float_reg_top{
 	display:block;
 	float:right;
