@@ -19,5 +19,9 @@
    	<div class="wrapper row4">
    		<%= render :partial => "layouts/footer" %>
    	</div>
+
+	<% if Rails.env == 'production' %>
+		<%= render partial: 'google_analytics' %>
+	<% end %>
 </body>
 </html>
