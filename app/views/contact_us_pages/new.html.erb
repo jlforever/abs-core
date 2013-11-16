@@ -14,6 +14,7 @@
 						<%= check_box_tag 'picked_loi[]', loi.to_s.html_safe %>
 						<%= h loi.to_s.html_safe %>&nbsp;
 					<% end %><br/><br/>
+					<%= label_tag "Which Metro Area are you from? (required): "%><%= select_tag(:metro_area, options_for_select(@metro_areas))%><br/>
 					<%= label_tag "Parent's First Name (required): "%><%= text_field_tag(:parent_first_name)%><br/>
 					<%= label_tag "Parent's Last Name (required): "%><%= text_field_tag(:parent_last_name)%><br/>
 					<%= label_tag "Phone Number (required): "%><%= text_field_tag(:phone_number)%><br/>

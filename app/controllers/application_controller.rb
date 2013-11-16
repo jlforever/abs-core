@@ -24,7 +24,6 @@ class ApplicationController < ActionController::Base
       "Sitemap" => "#", 
       "Privacy Policy" => "#", 
       "Term of Use" => "#", 
-      "Copyright Information" => "#"
     }
   end
 

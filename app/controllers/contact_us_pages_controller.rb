@@ -3,10 +3,18 @@ class ContactUsPagesController < ApplicationController
   def new
     @interests = ["Enrollment", "Free Class", "General Information"]
     @lang_of_interest = ["Chinese Mandarin", "Others"]
+    @metro_areas = [
+      ['Select a metro area', nil],
+      ['Boston/Cambridge', 'Boston/Cambridge'], 
+      ['Metro West', 'Metro West'], 
+      ['North Shore', 'North Shore'], 
+      ['South Shore', 'South Shore'], 
+      ['Others', 'Others']
+    ]
   end
   
   def presence_of_all_required_fields?(hash)
-    ["parent_first_name", "parent_last_name", "phone_number", "email_address"].all? do |field|
+    ["parent_first_name", "parent_last_name", "phone_number", "email_address", "metro_area"].all? do |field|
       hash[field].present?
     end
   end

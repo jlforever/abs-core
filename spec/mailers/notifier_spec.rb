@@ -41,6 +41,7 @@ describe Notifier do
         "parent_last_name"=>"Ji", 
         "phone_number"=>"6262286946", 
         "email_address"=>"aeio@gmail.com", 
+        "metro_area" => "Boston/Cambridge",
         "notes"=>{"text"=>"Something"}, 
         "commit"=>"Submit"
       }
@@ -63,6 +64,7 @@ describe Notifier do
       @email.body.encoded.should match("Others")
       @email.body.encoded.should match("Something")
       @email.body.encoded.should match("Enrollment")
+      @email.body.encoded.should match("Boston/Cambridge")
     end
     
   end
