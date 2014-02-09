@@ -19,6 +19,7 @@ describe Registration do
           :zip => reg.zip,
           :child_dob => Time.now - 6.years,
           :parent_email => reg.parent_email,
+          :emergency_contact_name => reg.emergency_contact_name,
           :emergency_contact_phone => reg.emergency_contact_phone,
           :parent_day_phone => reg.parent_day_phone,
           :parent_cell_phone => reg.parent_cell_phone)
@@ -39,6 +40,7 @@ describe Registration do
         :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_name => reg.emergency_contact_name,
         :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
@@ -59,6 +61,7 @@ describe Registration do
         :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_name => reg.emergency_contact_name,
         :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
@@ -79,6 +82,7 @@ describe Registration do
         :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_name => reg.emergency_contact_name,
         :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
@@ -99,6 +103,7 @@ describe Registration do
         :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_name => reg.emergency_contact_name,
         :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
@@ -119,6 +124,7 @@ describe Registration do
         :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_name => reg.emergency_contact_name,
         :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
@@ -135,7 +141,9 @@ describe Registration do
           :child_dob => Time.now - 6.years,
           :parent_email => reg.parent_email,
           :parent_day_phone => reg.parent_day_phone,
-          :parent_cell_phone => reg.parent_cell_phone)
+          :parent_cell_phone => reg.parent_cell_phone,
+          :emergency_contact_name => reg.emergency_contact_name,
+          :emergency_contact_phone => reg.emergency_contact_phone)
       }.to raise_error
     end
     
@@ -147,6 +155,8 @@ describe Registration do
           :child_dob => Time.now - 6.years,
           :parent_email => reg.parent_email,
           :parent_day_phone => reg.parent_day_phone,
+          :emergency_contact_name => reg.emergency_contact_name,
+          :emergency_contact_phone => reg.emergency_contact_phone,
           :parent_cell_phone => reg.parent_cell_phone)
       }.to raise_error
     end
@@ -159,6 +169,8 @@ describe Registration do
           :parent_last_name => 'Blah',
           :child_dob => Time.now - 6.years,
           :parent_day_phone => reg.parent_day_phone,
+          :emergency_contact_name => reg.emergency_contact_name,
+          :emergency_contact_phone => reg.emergency_contact_phone,
           :parent_cell_phone => reg.parent_cell_phone)
       }.to raise_error
     end
@@ -174,6 +186,8 @@ describe Registration do
           :child_dob => Time.now - 6.years,
           :parent_email => reg.parent_email,
           :parent_day_phone => "123.4563-6896",
+          :emergency_contact_name => reg.emergency_contact_name,
+          :emergency_contact_phone => reg.emergency_contact_phone,
           :parent_cell_phone => reg.parent_cell_phone)
       }.to raise_error
     end
@@ -211,6 +225,7 @@ describe Registration do
         :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_name => reg.emergency_contact_name,
         :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)
@@ -241,6 +256,7 @@ describe Registration do
         :zip => reg.zip,
         :child_dob => Time.now - 6.years,
         :parent_email => reg.parent_email,
+        :emergency_contact_name => reg.emergency_contact_name,
         :emergency_contact_phone => reg.emergency_contact_phone,
         :parent_day_phone => reg.parent_day_phone,
         :parent_cell_phone => reg.parent_cell_phone)

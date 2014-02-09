@@ -25,6 +25,7 @@ class Registration < ActiveRecord::Base
   validates_presence_of :child_first_name, :child_last_name, :child_dob
   validates_presence_of :parent_first_name, :parent_last_name, :parent_email
   validates_presence_of :address1, :city, :state, :zip
+  validates_presence_of :emergency_contact_name
   validates_presence_of :emergency_contact_phone
   
   # Make sure contact phone number entered is present and is in

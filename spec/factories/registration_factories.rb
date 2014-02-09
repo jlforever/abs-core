@@ -15,6 +15,7 @@ FactoryGirl.define do
     city "SomeCity"
     state "SomeState"
     zip "12345"
+    emergency_contact_name "parent name"
     emergency_contact_phone "1235468790"
   end
   
