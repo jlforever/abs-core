@@ -1,1 +1,3 @@
-375
+location, fee
+boston, 264
+braintree, 175

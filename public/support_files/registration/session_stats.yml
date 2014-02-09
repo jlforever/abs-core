@@ -9,3 +9,27 @@ fall_2013:
     end_date: 2013-12-20
     panda: 335
     star: 375
+    
+spring_2014_s1_boston:
+    start_date: 2014-02-22
+    end_date: 2014-04-12
+    panda: 264
+    star: 264
+
+spring_2014_s2_boston:
+    start_date: 2014-04-19
+    end_date: 2014-06-14
+    panda: 264
+    star: 264
+
+spring_2014_s1_braintree:
+    start_date: 2014-02-25
+    end_date: 2014-04-15
+    panda: 175
+    star: 175
+
+spring_2014_s2_braintree:
+    start_date: 2014-04-22
+    end_date: 2014-06-10
+    panda: 200
+    star: 200

@@ -1,0 +1,18 @@
+Dear ABLS Admin,
+
+A new registration has just came through. Below are the detailed info.
+
+Kid's Name: <%= @child_first_name + ' ' + @child_last_name %>
+Parent's Name: <%= @parent_first_name + ' ' + @parent_last_name %>
+Day Phone: <%= @day_phone %>
+Cell Phone: <%= @cell_phone %>
+Email: <%= @email %>
+Registered class location: <%= @class_location %>
+Kid age group: <%= @level_age_group %>
+Registered on: <%= @registered_on %>
+
+---------------
+ABLS Internal
+www.alphabetaschool.org
+<%= Time.now.strftime("%m-%d-%Y %H:%M:%S") %>
+---------------

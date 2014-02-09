@@ -4,6 +4,9 @@ AbsCore::Application.routes.draw do
 
   root :to => "pages#index"
   
+  resources :school_locales do
+  end
+  
   resources :registrations do
   end
   

@@ -1,6 +1,6 @@
 Dear <%= @parent_first_name %>,
 
-We are very pleased that you've registered with Alpha Beta Language School. Please make sure to mail out a check, of an amount of $<%= Registration.fee %> payable to 'Alpha Beta Language School' by <%= @reg_created_valid_until %>.
+We are very pleased that you've registered with Alpha Beta Language School. Please make sure to mail out a check, of an amount of $<%= @fee.to_s %> payable to 'Alpha Beta Language School' by <%= @reg_created_valid_until %>.
 
 Once we have received the check and process the registration, we will send out a confirmation email detailing the next steps.
 

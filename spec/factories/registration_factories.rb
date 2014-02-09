@@ -2,6 +2,7 @@ FactoryGirl.define do
   
   factory :registration, :class => Registration do
     class_level 'Beginner Panda Group'
+    location 'Boston - Brimmer St'
     child_first_name 'John'
     child_last_name 'Greene'
     parent_first_name 'Mary'

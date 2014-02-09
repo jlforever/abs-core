@@ -34,11 +34,13 @@ class Registration::FileHelpers
   def self.parse_reg_page_headers
     text = File.read(File.join(Rails.root, 'public', 'support_files', 'registration', 'reg_page_intro_text.txt'))
     lines = text.split(/\n/)
-    { "header" => lines[0..-4], "date_time" => lines[-3..-1] }
+    { "header" => lines[0..6], "date_time" => lines[-4..-1] }
   end
   
   def self.parse_reg_fee
     text = File.read(File.join(Rails.root, 'public', 'support_files', 'registration', 'latest_reg_fee.txt'))
-    text.split(/\n/).first
+    text = text.split(/\n/)
+    rows = text.map { |at| at.split(',').map(&:strip) }
+    rows = rows[1..-1].map { |r| Hash[*rows[0].zip(r).flatten] }
   end
 end

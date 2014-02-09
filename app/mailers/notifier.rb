@@ -18,12 +18,31 @@ class Notifier < ActionMailer::Base
   end
   private :build_to_address
 
-  def send_registration_confirmation_email(to_address, parent_first_name, reg_created_date)
+  def send_registration_confirmation_email(to_address, parent_first_name, reg_created_date, fee_location)
     @parent_first_name = parent_first_name
     @reg_created_valid_until = (reg_created_date + 2.week).strftime("%m-%d-%Y %H:%M:%S")
+    fee_template = Registration.fee.detect { |hash| hash['location'] == fee_location }
+    @fee = fee_template ? fee_template['fee'].to_i : 0
     mail(:to => to_address,
       :from => 'info@alphabetaschool.org',
       :subject => 'Thank you for registering with ABLS')
+  end
+  
+  def send_registration_notification_to_abls_admin(registered_data)
+    @class_location = registered_data.location
+    @child_first_name = registered_data.child_first_name
+    @child_last_name = registered_data.child_last_name
+    @parent_first_name = registered_data.parent_first_name
+    @parent_last_name = registered_data.parent_last_name
+    @level_age_group = registered_data.class_level
+    @day_phone = registered_data.parent_day_phone
+    @cell_phone = registered_data.parent_cell_phone
+    @email = registered_data.parent_email
+    @registered_on = registered_data.created_at.strftime('%m-%d-%Y %H:%M:%S')
+    
+    mail(to: 'info@alphabetaschool.org', 
+     from: 'info@alphabetaschool.org', 
+     subject: "Kid: #{@child_first_name} #{@child_last_name}, Parent: #{@parent_first_name} #{@parent_last_name} just registered!")
   end
   
 end

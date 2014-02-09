@@ -5,7 +5,7 @@
   </head>
   <body>
 	<p><%= "Dear " + @parent_first_name + "," %></p>
-	<p><%= "We are very pleased that you've registered with Alpha Beta Language School. Please make sure to mail out a check, of an amount of $" + Registration.fee + " payable to 'Alpha Beta Language School' by " + @reg_created_valid_until + "." %></p> 
+	<p><%= "We are very pleased that you've registered with Alpha Beta Language School. Please make sure to mail out a check to 9 Dobson Road, Braintree MA, 02184, of an amount of $" + @fee.to_s + " payable to 'Alpha Beta Language School' by " + @reg_created_valid_until + "." %></p> 
 	<p>Once we have received the check and process the registration, we will send out a confirmation email detailing the next steps.</p>
 	<p>Thanks,</p>
 	

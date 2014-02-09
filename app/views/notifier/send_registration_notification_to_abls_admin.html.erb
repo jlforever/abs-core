@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+	<p>Dear ABLS Admin,</p>
+	
+	<p>A new registration has just came through. Below are the detailed info.</p>
+	<br/>
+	<table>
+		<tr><td><b>Kid's Name: </b></td><td><%= @child_first_name + ' ' + @child_last_name %></td></tr>
+		<tr><td><b>Parent's Name: </b></td><td><%= @parent_first_name + ' ' + @parent_last_name %></td></tr>
+		<tr><td><b>Day Phone: </b></td><td><%= @day_phone %></td></tr>
+		<tr><td><b>Cell Phone: </b></td><td><%= @cell_phone %></td></tr>
+		<tr><td><b>Email: </b></td><td><%= @email %></td></tr>
+		<tr><td><b>Class location: </b></td><td><%= @class_location %></td></tr>
+		<tr><td><b>Kid age group: </b></td><td><%= @level_age_group %></td></tr>
+		<tr><td><b>Registered on: </b></td><td><%= @registered_on %></td></tr>
+	</table>
+	
+	<p>------------------------------</p>
+	<p>ABLS Admin</p>
+	<p><a href="www.alphabetaschool.org">www.alphabetaschool.org</a></p>
+	<p><%= Time.now.strftime("%m-%d-%Y %H:%M:%S") %></p>
+	<p>------------------------------</p>
+  </body>
+</html>

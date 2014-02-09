@@ -1,7 +1,8 @@
 <%= semantic_form_for @registration do |f| %>
   <h1>The Language Journey Starts Here!</h1>
   <%= f.inputs do %>
-	<%= f.input :class_level, :as => :radio, :label => "Choose class level", :collection => @class_levels %><br/>
+	<%= f.input :class_level, :as => :radio, :label => "Child age group", :collection => @class_levels %><br/>
+	<%= f.input :location, :as => :select, :label => 'Class location', :collection => @locations_options %><br/>
     <%= f.input :child_first_name %>
     <%= f.input :child_last_name %>
 	<%= f.input :child_nick_name %>
@@ -23,7 +24,7 @@
   <% end %>
 
   <%= f.actions do %>
-    <%= f.action :submit, :as => :input, :label => "Create Registration" %>
+    <%= f.action :submit, :as => :input, :label => "Register" %>
 	<%= f.action :reset, :label => "Clear Form" %>
   <% end %>
 <% end %>

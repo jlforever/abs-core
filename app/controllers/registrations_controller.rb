@@ -11,8 +11,8 @@ class RegistrationsController < ApplicationController
   
   def build_form_required_values
     @class_levels = { 
-      "Beginner Panda Group (Ages 3 - 5)" => "Beginner Panda Group (Ages 3 - 5)", 
-      "Beginner Star Group (Ages 5 - 10)" => "Beginner Star Group (Ages 5 - 10)" 
+      "Panda Group (Ages 3 - 6)" => "Panda Group (Ages 3 - 6)", 
+      "Star Group (Ages 6 - 10)" => "Star Group (Ages 6 - 10)" 
     }
     @hear_about_us_options = [
       ["Website", "Website"], 
@@ -20,6 +20,11 @@ class RegistrationsController < ApplicationController
       ["Advertisment", "Advertisment"], 
       ["Friends", "Friends"], 
       ["Others", "Others"]]
+      
+    @locations_options = [
+      'Boston - Brimmer St.',
+      'Braintree - Dobson Rd.'
+    ]
   end
   
   def index
