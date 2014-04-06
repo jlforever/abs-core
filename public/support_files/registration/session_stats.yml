@@ -17,10 +17,10 @@ spring_2014_s1_boston:
     star: 264
 
 spring_2014_s2_boston:
-    start_date: 2014-04-19
+    start_date: 2014-04-05
     end_date: 2014-06-14
-    panda: 264
-    star: 264
+    panda: 231
+    star: 231
 
 spring_2014_s1_braintree:
     start_date: 2014-02-25

@@ -196,7 +196,7 @@ describe Registration do
   describe ".fee" do
     it "specifies the session fee" do
       Registration.fee.should == [
-        { 'location' => 'boston', 'fee' => '264' },
+        { 'location' => 'boston', 'fee' => '231' },
         { 'location' => 'braintree', 'fee' => '175' },
       ]
     end
