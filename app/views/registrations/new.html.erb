@@ -12,10 +12,15 @@
 					<li><%= text %></li>
 				<% end %>
 			</ul>
-			<br/>
-			<h2>Latest Session Schedule:</h2>
+			<h2>Boston Location Schedule:</h2>
 			<ul>
-				<% @date_time.each do |dt| %>
+				<% @date_time['boston'].each do |dt| %>
+					<li><%= dt %></li>
+				<% end %>
+			</ul>
+			<h2>Braintree Location Schedule:</h2>
+			<ul>
+				<% @date_time['braintree'].each do |dt| %>
 					<li><%= dt %></li>
 				<% end %>
 			</ul>
@@ -23,7 +28,7 @@
 		<br/>
 		<div class="right_float_reg_top">
 			<h2>Join Us For The Fun Ride!</h2>
-			<div style="margin:50px 12px 12px 12px;">
+			<div style="margin:18px 12px 12px 12px;">
 				<%= image_tag("/assets/happy-kids-learning.jpg")%>
 			</div>
 		</div>

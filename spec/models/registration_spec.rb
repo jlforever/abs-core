@@ -132,6 +132,22 @@ describe Registration do
     end
   end
   
+  describe 'raises child age error' do
+    it 'invalidates and not create the new record' do
+      expect {
+        Registration.create!( :child_last_name => reg.child_last_name,
+          :parent_first_name => "SomeParentFirstName",
+          :parent_last_name => 'Blah',
+          :child_dob => Time.now - 1.years,
+          :parent_email => reg.parent_email,
+          :parent_day_phone => reg.parent_day_phone,
+          :parent_cell_phone => reg.parent_cell_phone,
+          :emergency_contact_name => reg.emergency_contact_name,
+          :emergency_contact_phone => reg.emergency_contact_phone)
+      }.to raise_error
+    end
+  end
+  
   describe "Missing required fields" do
     it "prevents the creation of a registration without child first name" do
       expect {

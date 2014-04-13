@@ -46,10 +46,20 @@ class Registration < ActiveRecord::Base
     :message => "check format"
   }
   
+  validate :child_must_be_at_least_three_years_old
+  
   after_save :created_registration_email
   after_save :notify_abls_admin_via_email
   
   private
+  
+  def child_must_be_at_least_three_years_old
+    three_years_ago = Time.zone.now - 3.years
+    
+    if self.child_dob > three_years_ago
+      errors.add(:base, 'Your child needs to be at least 3 years old or older in order to register')
+    end
+  end
   
   def created_registration_email
     fee_location = self.location.split('-').first.strip.downcase

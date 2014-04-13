@@ -6,7 +6,16 @@ class RegistrationsController < ApplicationController
   def acquire_registration_headers
     result = ::Registration::FileHelpers.parse_reg_page_headers
     @intro_texts = result["header"]
-    @date_time = result["date_time"]
+    #@date_time = result["date_time"]
+    h = { 'boston' => [], 'braintree' => [] }
+    @date_time = result["date_time"].reduce(h) do |hash, dt|
+      if dt.match(/boston/i).present? 
+        hash['boston'] << dt.gsub(/\sBoston\s?/i, " ").strip
+      else
+        hash['braintree'] << dt.gsub(/\sBraintree\s?/i, " ").strip
+      end
+      hash
+    end
   end
   
   def build_form_required_values
@@ -44,6 +53,9 @@ class RegistrationsController < ApplicationController
         @registration_email = @registration.parent_email
       end
     rescue => ex
+      if ex.message.match(/at least 3 years old/)
+        flash.now[:flash_alert] = ex.message
+      end
       render :action => :new
     end
   end

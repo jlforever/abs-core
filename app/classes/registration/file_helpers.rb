@@ -34,7 +34,7 @@ class Registration::FileHelpers
   def self.parse_reg_page_headers
     text = File.read(File.join(Rails.root, 'public', 'support_files', 'registration', 'reg_page_intro_text.txt'))
     lines = text.split(/\n/)
-    { "header" => lines[0..6], "date_time" => lines[-4..-1] }
+    { "header" => lines[0..6], "date_time" => lines[-5..-1] }
   end
   
   def self.parse_reg_fee
