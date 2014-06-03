@@ -10,8 +10,8 @@
     <%= f.input :parent_first_name %>
     <%= f.input :parent_last_name %>
     <%= f.input :parent_email %>
-    <%= f.input :parent_day_phone, :as => :phone %>
-	<%= f.input :parent_cell_phone, :as => :phone %><br/>
+    <%= f.input :parent_day_phone, :as => :phone, :label => 'Parent day phone*' %>
+	<%= f.input :parent_cell_phone, :as => :phone, :label => 'Parent cell phone*' %><br/>
 	<%= f.input :address1 %>
 	<%= f.input :address2 %>
 	<%= f.input :city %>
