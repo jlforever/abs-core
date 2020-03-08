@@ -46,8 +46,8 @@ module S3Utils
 
   def self.config_keys
     {
-      :access_key_id     => 'AKIAICB56NJXHWAFRH5Q',
-      :secret_access_key => '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'
+      :access_key_id     => ENV['S3_ACCESS_KEY'],
+      :secret_access_key => ENV['S3_ACCESS_KEY_SECRET']
     }
   end
   private_class_method :config_keys
