@@ -16,7 +16,6 @@ class ApplicationController < ActionController::Base
       "PROGRAMS" => program_pages_path,
       "REGISTRATION" => new_registration_path,
       "TESTIMONIALS" => testimonials_path,
-      "LOCATIONS" => school_locales_path,
       "CONTACT US" => new_contact_us_page_path
     }
     @quick_links ||= { 

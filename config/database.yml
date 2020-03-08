@@ -62,18 +62,16 @@ development:
   adapter: postgresql
   encoding: unicode
   database: abs_next_development
+  host: localhost
   pool: 5
-  username: postgres
-  password: postgres
   min_messages: warning
   timeout: 5000
   
 test:
-    adapter: postgresql
-    encoding: unicode
-    database: abs_test
-    pool: 5
-    username: postgres
-    password: postgres
-    min_messages: warning
-    timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  database: abs_test
+  host: localhost
+  pool: 5
+  min_messages: warning
+  timeout: 5000
