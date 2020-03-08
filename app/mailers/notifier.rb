@@ -1,7 +1,7 @@
 class Notifier < ActionMailer::Base
 
   def test_email
-    mail(:to => 'info@alphabetaschool.org', :from => 'ABLS Info <info@alphabetaschool.org>', :subject => 'This is a test email')
+    mail(:to => 'admin@alphabetaschool.org', :from => 'ABLS Info <admin@alphabetaschool.org>', :subject => 'This is a test email')
   end
   
   def contact_us_email(contact_info)
