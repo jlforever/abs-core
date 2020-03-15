@@ -1,13 +1,13 @@
 class Notifier < ActionMailer::Base
 
   def test_email
-    mail(:to => 'info@alphabetaschool.org', :from => 'ABLS Info <info@alphabetaschool.org>', :subject => 'This is a test email')
+    mail(:to => 'admin@alphabetaschool.org', :from => 'ABLS <admin@alphabetaschool.org>', :subject => 'This is a test email')
   end
   
   def contact_us_email(contact_info)
     to_address = build_to_address(contact_info['email_address'], contact_info['parent_first_name'], contact_info['parent_last_name'])
     @contact_info = contact_info
-    mail(:to => 'info@alphabetaschool.org', 
+    mail(:to => 'admin@alphabetaschool.org', 
       :from => to_address, 
       :subject => "#{to_address} is interested in ABLS")
   end
@@ -24,7 +24,7 @@ class Notifier < ActionMailer::Base
     fee_template = Registration.fee.detect { |hash| hash['location'] == fee_location }
     @fee = fee_template ? fee_template['fee'].to_i : 0
     mail(:to => to_address,
-      :from => 'info@alphabetaschool.org',
+      :from => 'admin@alphabetaschool.org',
       :subject => 'Thank you for registering with ABLS')
   end
   
@@ -40,8 +40,8 @@ class Notifier < ActionMailer::Base
     @email = registered_data.parent_email
     @registered_on = registered_data.created_at.strftime('%m-%d-%Y %H:%M:%S')
     
-    mail(to: 'info@alphabetaschool.org', 
-     from: 'info@alphabetaschool.org', 
+    mail(to: 'admin@alphabetaschool.org', 
+     from: 'admin@alphabetaschool.org', 
      subject: "Kid: #{@child_first_name} #{@child_last_name}, Parent: #{@parent_first_name} #{@parent_last_name} just registered!")
   end
   

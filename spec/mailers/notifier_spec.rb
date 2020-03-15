@@ -12,7 +12,7 @@ describe Notifier do
     end
     
     it "sets the proper from address of the email" do
-      @email.from.should == ['info@alphabetaschool.org']
+      @email.from.should == ['admin@alphabetaschool.org']
     end
     
     it "sets the proper subject of the email" do
@@ -120,7 +120,7 @@ describe Notifier do
     end
     
     it "sets the proper to address of the email" do
-      @email.to.should == ['info@alphabetaschool.org']
+      @email.to.should == ['admin@alphabetaschool.org']
     end
     
     it "contains the appropriate body info" do
