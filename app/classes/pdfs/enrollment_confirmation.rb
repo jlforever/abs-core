@@ -50,7 +50,7 @@ class Pdfs::EnrollmentConfirmation
       move_down 12
       text "Serena <Yan> Li"
       text "www.alphabetaschool.org"
-      text "Email: info@alphabetaschool.org"
+      text "Email: admin@alphabetaschool.org"
       text "Phone: 781-519-9319"
     end
     

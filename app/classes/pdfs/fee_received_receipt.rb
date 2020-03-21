@@ -50,7 +50,7 @@ class Pdfs::FeeReceivedReceipt
       move_down 12
       text "Receipt Date: #{c_time}"
       text "www.alphabetaschool.org"
-      text "Email: info@alphabetaschool.org"
+      text "Email: admin@alphabetaschool.org"
       text "Phone: 781-519-9319"
     end
   end
