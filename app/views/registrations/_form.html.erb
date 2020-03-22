@@ -3,10 +3,14 @@
   <%= f.inputs do %>
 	<%= f.input :class_level, :as => :radio, :label => "Child age group", :collection => @class_levels %><br/>
 	<%= f.input :location, :as => :select, :label => 'Class location', :collection => @locations_options %><br/>
-    <%= f.input :child_first_name %>
-    <%= f.input :child_last_name %>
-	<%= f.input :child_nick_name %>
-	<%= f.input :child_dob, :as => :date_picker, :label => "Child Date Of Birth" %><br/>
+    <%= f.input :child_first_name, label: 'First child first name' %>
+    <%= f.input :child_last_name, label: 'First child last name' %>
+	<%= f.input :child_nick_name, label: 'First child nickname' %>
+	<%= f.input :child_dob, :as => :date_picker, :label => "First child date of birth" %><br/>
+	<%= f.input :second_child_first_name, label: 'Second child first name' %>
+	<%= f.input :second_child_last_name, label: 'Second child last name' %>
+	<%= f.input :second_child_nickname, label: 'Second child nickname' %>
+	<%= f.input :second_child_dob, as: :date_picker, label: 'Second child date of birth' %><br/>
     <%= f.input :parent_first_name %>
     <%= f.input :parent_last_name %>
     <%= f.input :parent_email %>
