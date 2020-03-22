@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140208201609) do
+ActiveRecord::Schema.define(:version => 20200322045551) do
 
   create_table "registrations", :force => true do |t|
     t.string   "class_level"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(:version => 20140208201609) do
     t.string   "child_nick_name"
     t.string   "heard_from"
     t.string   "location"
+    t.string   "second_child_first_name"
+    t.string   "second_child_last_name"
+    t.string   "second_child_dob"
+    t.string   "second_child_nickname"
   end
 
   create_table "users", :force => true do |t|
