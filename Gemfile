@@ -5,7 +5,7 @@ gem 'rails', '3.1.12'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test], require: 'dotenv/rails-now'
 gem 'pg'
 gem 'rake', '>= 0.9.2.2', :require => false
 gem 'unicorn'
@@ -42,5 +42,4 @@ group :development, :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
   gem 'foreman'
-  gem 'pry'
 end

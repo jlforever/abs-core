@@ -12,30 +12,18 @@
 					<li><%= text %></li>
 				<% end %>
 			</ul>
-			<% if @date_time['boston'].present? %>
-				<h2>Boston Location Schedule:</h2>
-				<ul>
-					<% @date_time['boston'].each do |dt| %>
-						<li><%= dt %></li>
-					<% end %>
-				</ul>
-			<% end %>
-			<% if @date_time['braintre'].present? %>
+			<h2>Boston Location Schedule:</h2>
+			<ul>
+				<% @date_time['boston'].each do |dt| %>
+					<li><%= dt %></li>
+				<% end %>
+			</ul>
 			<h2>Braintree Location Schedule:</h2>
 			<ul>
 				<% @date_time['braintree'].each do |dt| %>
 					<li><%= dt %></li>
 				<% end %>
 			</ul>
-			<% end %>
-			<% if @date_time['virtual'].present? %>
-			<h2>Virtual Class via Zoom:</h2>
-			<ul>
-				<% @date_time['virtual'].each do |dt| %>
-					<li><%= dt %></li>
-				<% end %>
-			</ul>
-			<% end %>
 		</div>
 		<br/>
 		<div class="right_float_reg_top">
