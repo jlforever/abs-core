@@ -6,33 +6,39 @@ class RegistrationsController < ApplicationController
   def acquire_registration_headers
     result = ::Registration::FileHelpers.parse_reg_page_headers
     @intro_texts = result["header"]
-    #@date_time = result["date_time"]
-    h = { 'boston' => [], 'braintree' => [] }
+    h = { 'boston' => [], 'braintree' => [], 'virtual' => [] }
     @date_time = result["date_time"].reduce(h) do |hash, dt|
       if dt.match(/boston/i).present? 
         hash['boston'] << dt.gsub(/\sBoston\s?/i, " ").strip
-      else
+      elsif dt.match(/braintree/).present?
         hash['braintree'] << dt.gsub(/\sBraintree\s?/i, " ").strip
+      elsif dt.match(/Zoom/).present?
+        hash['virtual'] << dt.gsub(/\sZoom\s?/i, " ").strip
       end
       hash
     end
   end
   
   def build_form_required_values
-    @class_levels = { 
-      "Panda Group (Ages 3 - 6)" => "Panda Group (Ages 3 - 6)", 
-      "Star Group (Ages 6 - 10)" => "Star Group (Ages 6 - 10)" 
+    @class_levels = {
+      # Panda and Star groups temp unavailable
+      #"Panda Group (Ages 3 - 6)" => "Panda Group (Ages 3 - 6)", 
+      #"Star Group (Ages 6 - 10)" => "Star Group (Ages 6 - 10)",
+      'Virtual Class (Ages 4 - 6)' => 'Virtual Class (Ages 4 - 6)'
     }
     @hear_about_us_options = [
       ["Website", "Website"], 
+      ["WeChat Group", "WeChat Group"],
       ["Flyer", "Flyer"], 
       ["Advertisment", "Advertisment"], 
       ["Friends", "Friends"], 
       ["Others", "Others"]]
       
     @locations_options = [
-      'Boston - Brimmer St.',
-      'Braintree - Dobson Rd.'
+      # No physical location face to face teaching at the moment
+      #'Boston - Brimmer St.',
+      #'Braintree - Dobson Rd.'
+      'Virtual Class - Via Zoom'
     ]
   end
   
