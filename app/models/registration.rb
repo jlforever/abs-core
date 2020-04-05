@@ -72,7 +72,8 @@ class Registration < ActiveRecord::Base
   end
 
   def created_registration_email
-    fee_location = self.location.split('-').first.strip.downcase
+    teacher = self.class_level.match(/Serena|Amaia|BaoBao/).to_s
+    fee_location = self.location.split('-').first.strip.downcase + " #{teacher}"
     Notifier.send_registration_confirmation_email(self.parent_email, 
       self.parent_first_name, self.created_at, fee_location).deliver
   end

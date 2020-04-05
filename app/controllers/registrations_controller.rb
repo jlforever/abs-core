@@ -6,14 +6,18 @@ class RegistrationsController < ApplicationController
   def acquire_registration_headers
     result = ::Registration::FileHelpers.parse_reg_page_headers
     @intro_texts = result["header"]
-    h = { 'boston' => [], 'braintree' => [], 'virtual' => [] }
+    h = { 'boston' => [], 'braintree' => [], 'virtual-chinese' => [], 'virtual-spanish' => [], 'virtual-chinese2' => [] }
     @date_time = result["date_time"].reduce(h) do |hash, dt|
       if dt.match(/boston/i).present? 
         hash['boston'] << dt.gsub(/\sBoston\s?/i, " ").strip
       elsif dt.match(/braintree/).present?
         hash['braintree'] << dt.gsub(/\sBraintree\s?/i, " ").strip
-      elsif dt.match(/Zoom/).present?
-        hash['virtual'] << dt.gsub(/\sZoom\s?/i, " ").strip
+      elsif dt.match(/Zoom/).present? && dt.match(/Chinese/).present?
+        hash['virtual-chinese'] << dt.gsub(/\sZoom\s?/i, " ").strip
+      elsif dt.match(/Zoom/).present? && dt.match(/CHN/).present?
+        hash['virtual-chinese2'] << dt.gsub(/\sZoom\s?/i, " ").gsub(/\sCHN\s?/i, " Chinese ").strip
+      elsif dt.match(/Zoom/).present? && dt.match(/Spanish/).present?
+        hash['virtual-spanish'] << dt.gsub(/\sZoom\s?/i, " ").strip
       end
       hash
     end
@@ -24,7 +28,9 @@ class RegistrationsController < ApplicationController
       # Panda and Star groups temp unavailable
       #"Panda Group (Ages 3 - 6)" => "Panda Group (Ages 3 - 6)", 
       #"Star Group (Ages 6 - 10)" => "Star Group (Ages 6 - 10)",
-      'Virtual Class (Ages 4 - 6)' => 'Virtual Class (Ages 4 - 6)'
+      'Virtual Chinese Class (Ages 4 - 6), Ms. Serena' => 'Virtual Chinese Class (Ages 4 - 6), Ms. Serena',
+      'Virtual Chinese Class (Ages 4 - 6), Ms. BaoBao' => 'Virtual Chinese Class (Ages 4 - 6), Ms. BaoBao',
+      'Virtual Spanish Class (Ages 4 - 6), Ms. Amaia' => 'Virtual Spanish Class (Ages 4 - 6), Ms. Amaia'
     }
     @hear_about_us_options = [
       ["Website", "Website"], 
@@ -55,7 +61,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(params['registration'])
     begin
       if @registration.save!
-        @message = "Thank you for registering with Alpha Beta Language School!"
+        @message = "Thank you for registering with Alpha Beta Academy!"
         @registration_email = @registration.parent_email
       end
     rescue => ex

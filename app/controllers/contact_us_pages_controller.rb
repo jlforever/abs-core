@@ -2,14 +2,15 @@ class ContactUsPagesController < ApplicationController
   
   def new
     @interests = ["Enrollment", "Free Class", "General Information"]
-    @lang_of_interest = ["Chinese Mandarin", "Others"]
+    @lang_of_interest = ["Chinese Mandarin", "Spanish", "Others"]
     @metro_areas = [
-      ['Select a metro area', nil],
+      ['Select a study location', nil],
+      ['Virtual class', 'Virtual class'],
       ['Boston/Cambridge', 'Boston/Cambridge'], 
       ['Metro West', 'Metro West'], 
       ['North Shore', 'North Shore'], 
       ['South Shore', 'South Shore'], 
-      ['Others', 'Others']
+      ['Others', 'Others'],
     ]
   end
   
