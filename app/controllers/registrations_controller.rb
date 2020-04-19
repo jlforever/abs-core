@@ -65,7 +65,7 @@ class RegistrationsController < ApplicationController
         @registration_email = @registration.parent_email
       end
     rescue => ex
-      if ex.message.match(/at least 3 years old/) || ex.message.match(/either skip the second child/)
+      if ex.message.match(/at least 3 years old/) || ex.message.match(/either skip the second child/) || ex.message.match(/currently having a session/)
         flash.now[:flash_alert] = ex.message.gsub('Validation failed:', '').strip
       end
       render :action => :new

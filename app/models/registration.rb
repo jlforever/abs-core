@@ -1,4 +1,5 @@
 class Registration < ActiveRecord::Base
+  VALID_STATUSES = ['registered', 'paid', 'finished']
 
   # Registration are considered unique when child's
   # first and last name plus child's parent first name
@@ -12,10 +13,10 @@ class Registration < ActiveRecord::Base
   # the clearing will enable new registrations for a new
   # session to be able to create
   #
-  validates :child_first_name, :uniqueness => {
-    :scope => [:child_last_name, :parent_first_name, :class_level, :location],
-    :case_sensitive => false
-  }
+  #validates :child_first_name, :uniqueness => {
+  #  :scope => [:child_last_name, :parent_first_name, :class_level, :location],
+  #  :case_sensitive => false
+  #}
 
   # These fields are required to be available when intending to be
   # creating a registration object
@@ -27,6 +28,8 @@ class Registration < ActiveRecord::Base
   validates_presence_of :address1, :city, :state, :zip
   validates_presence_of :emergency_contact_name
   validates_presence_of :emergency_contact_phone
+
+  validates :status, inclusion: { in: VALID_STATUSES }
 
   # Make sure contact phone number entered is present and is in
   # the proper format 
@@ -46,6 +49,7 @@ class Registration < ActiveRecord::Base
     :message => "check format"
   }
 
+  validate :verify_registration_eligible
   validate :child_must_be_at_least_three_years_old
   validate :second_child_details_must_be_complete
 
@@ -53,6 +57,21 @@ class Registration < ActiveRecord::Base
   after_save :notify_abls_admin_via_email
 
   private
+
+  def verify_registration_eligible
+    [:child_last_name, :parent_first_name, :class_level, :location]
+
+    on_going_class = Registration.where(
+      child_last_name: self.child_last_name,
+      parent_first_name: self.parent_first_name,
+      class_level: self.class_level,
+      location: self.location).
+    where('registrations.status in (?)', ['registered', 'fees_paid']).present?
+
+    if on_going_class
+      errors.add(:base, "Your child is currently having a session. Please wait until this session finishes prior to registering again. Thanks")
+    end
+  end
 
   def child_must_be_at_least_three_years_old
     three_years_ago = Time.zone.now - 3.years
