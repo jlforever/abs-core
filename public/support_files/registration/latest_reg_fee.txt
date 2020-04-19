@@ -1,4 +1,6 @@
 location, fee
 boston, 300
 braintree, 190
-virtual class, 200
+virtual class Serena, 200
+virtual class Amaia, 200
+virtual class BaoBao, 160

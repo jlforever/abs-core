@@ -30,7 +30,7 @@ class Pdfs::EnrollmentConfirmation
       move_down 20
       text "Dear Alpha Beta Families,"
       move_down 20
-      text "I am very excited to have your children join Alpha Beta Language School's Chinese language immersion program. Alpha Beta will make the best effort to provide the most qualified Mandarin classes to your children. this email a confirmation of enrollment."
+      text "I am very excited to have your children join Alpha Beta Academy's Chinese language immersion program. Alpha Beta will make the best effort to provide the most qualified Mandarin classes to your children. this email a confirmation of enrollment."
       move_down 20
       text "<b>Schedule</b>: ", :inline_format => true
       if g.downcase == 'panda'
@@ -46,7 +46,7 @@ class Pdfs::EnrollmentConfirmation
       move_down 20
       text "Through email updates I will share with you the highlights of our curriculum and other information that I feel you should have or watch. I hope that this can aid us in our mutual efforts to make the most of each student's learning experience with Alpha Beta."
       move_down 30
-      text "<font size='13'><b><i>Alpha Beta Language School</i></b></font>", :inline_format => true
+      text "<font size='13'><b><i>Alpha Beta Academy</i></b></font>", :inline_format => true
       move_down 12
       text "Serena <Yan> Li"
       text "www.alphabetaschool.org"

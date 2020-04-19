@@ -38,7 +38,7 @@ class Pdfs::FeeReceivedReceipt
       move_down 20
       text "Dear #{p_name}, "
       move_down 20
-      text "Thank you for paying the tuition for your child #{c_name}. We are pleased to have your child to be a part of Alpha Beta Language School's curriculum. Below is the summary of what we received:"
+      text "Thank you for paying the tuition for your child #{c_name}. We are pleased to have your child to be a part of Alpha Beta Academy's curriculum. Below is the summary of what we received:"
       move_down 20
       table([["Session:", session_info.first.split("_").map(&:humanize).join(" ")],
         ["Total Fee:", "$" + "%0.2f" % (session_info.last[g].to_f)],
@@ -46,7 +46,7 @@ class Pdfs::FeeReceivedReceipt
         ["Outstanding Balance:", "$" + "%0.2f" % (session_info.last[g].to_f - r_amt.to_f)]
       ])
       move_down 30
-      text "<font size='13'><b><i>Alpha Beta Language School</i></b></font>", :inline_format => true
+      text "<font size='13'><b><i>Alpha Beta Academy</i></b></font>", :inline_format => true
       move_down 12
       text "Receipt Date: #{c_time}"
       text "www.alphabetaschool.org"

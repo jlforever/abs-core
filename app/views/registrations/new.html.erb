@@ -21,20 +21,36 @@
 				</ul>
 			<% end %>
 			<% if @date_time['braintre'].present? %>
-			<h2>Braintree Location Schedule:</h2>
-			<ul>
-				<% @date_time['braintree'].each do |dt| %>
-					<li><%= dt %></li>
-				<% end %>
-			</ul>
+				<h2>Braintree Location Schedule:</h2>
+				<ul>
+					<% @date_time['braintree'].each do |dt| %>
+						<li><%= dt %></li>
+					<% end %>
+				</ul>
 			<% end %>
-			<% if @date_time['virtual'].present? %>
-			<h2>Virtual Class via Zoom:</h2>
-			<ul>
-				<% @date_time['virtual'].each do |dt| %>
-					<li><%= dt %></li>
-				<% end %>
-			</ul>
+			<% if @date_time['virtual-chinese'].present? %>
+				<h2>Virtual Chinese Class via Zoom, Ms. Serena:</h2>
+				<ul>
+					<% @date_time['virtual-chinese'].each do |dt| %>
+						<li><%= dt %></li>
+					<% end %>
+				</ul>
+			<% end %>
+			<% if @date_time['virtual-chinese2'].present? %>
+				<h2>Virtual Chinese Class via Zoom, Ms. BaoBao:</h2>
+				<ul>
+					<% @date_time['virtual-chinese2'].each do |dt| %>
+						<li><%= dt %></li>
+					<% end %>
+				</ul>
+			<% end %>
+			<% if @date_time['virtual-spanish'].present? %>
+				<h2>Virtual Spanish Class via Zoom, Ms. Amaia:</h2>
+				<ul>
+					<% @date_time['virtual-spanish'].each do |dt| %>
+						<li><%= dt %></li>
+					<% end %>
+				</ul>
 			<% end %>
 		</div>
 		<br/>
