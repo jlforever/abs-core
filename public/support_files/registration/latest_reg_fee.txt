@@ -4,3 +4,5 @@ braintree, 190
 virtual class Serena, 200
 virtual class Amaia, 200
 virtual class BaoBao, 160
+virtual class Gaby-1, 160
+virtual class Gaby-2, 280

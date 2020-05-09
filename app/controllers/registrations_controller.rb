@@ -6,7 +6,7 @@ class RegistrationsController < ApplicationController
   def acquire_registration_headers
     result = ::Registration::FileHelpers.parse_reg_page_headers
     @intro_texts = result["header"]
-    h = { 'boston' => [], 'braintree' => [], 'virtual-chinese' => [], 'virtual-spanish' => [], 'virtual-chinese2' => [] }
+    h = { 'boston' => [], 'braintree' => [], 'virtual-chinese' => [], 'virtual-spanish' => [], 'virtual-chinese2' => [], 'virtual-spanish2' => [] }
     @date_time = result["date_time"].reduce(h) do |hash, dt|
       if dt.match(/boston/i).present? 
         hash['boston'] << dt.gsub(/\sBoston\s?/i, " ").strip
@@ -18,7 +18,10 @@ class RegistrationsController < ApplicationController
         hash['virtual-chinese2'] << dt.gsub(/\sZoom\s?/i, " ").gsub(/\sCHN\s?/i, " Chinese ").strip
       elsif dt.match(/Zoom/).present? && dt.match(/Spanish/).present?
         hash['virtual-spanish'] << dt.gsub(/\sZoom\s?/i, " ").strip
+      elsif dt.match(/Zoom/).present? && dt.match(/SPN/).present?
+        hash['virtual-spanish2'] << dt.gsub(/\sZoom\s?/i, " ").gsub(/\sSPN\s?/i, " Spanish ").strip
       end
+
       hash
     end
   end
@@ -30,7 +33,8 @@ class RegistrationsController < ApplicationController
       #"Star Group (Ages 6 - 10)" => "Star Group (Ages 6 - 10)",
       'Virtual Chinese Class (Ages 4 - 6), Ms. Serena' => 'Virtual Chinese Class (Ages 4 - 6), Ms. Serena',
       'Virtual Chinese Class (Ages 4 - 6), Ms. BaoBao' => 'Virtual Chinese Class (Ages 4 - 6), Ms. BaoBao',
-      'Virtual Spanish Class (Ages 4 - 6), Ms. Amaia' => 'Virtual Spanish Class (Ages 4 - 6), Ms. Amaia'
+      'Virtual Spanish Class (Ages 4 - 6, Level-0), Ms. Gaby' => 'Virtual Spanish Class (Ages 4 - 6, Level-0), Ms. Gaby',
+      'Virtual Spanish Class (Ages 4 - 6, Beginner), Ms. Gaby' => 'Virtual Spanish Class (Ages 4 - 6, Beginner), Ms. Gaby'
     }
     @hear_about_us_options = [
       ["Website", "Website"], 
@@ -65,7 +69,7 @@ class RegistrationsController < ApplicationController
         @registration_email = @registration.parent_email
       end
     rescue => ex
-      if ex.message.match(/at least 3 years old/) || ex.message.match(/either skip the second child/)
+      if ex.message.match(/at least 3 years old/) || ex.message.match(/either skip the second child/) || ex.message.match(/currently having a session/)
         flash.now[:flash_alert] = ex.message.gsub('Validation failed:', '').strip
       end
       render :action => :new

@@ -36,7 +36,7 @@ class Registration::FileHelpers
     lines = text.split(/\n/)
     # originally had line -5 to -1 to get physical location timing
     # { "header" => lines[0..6], "date_time" => lines[-5..-1] } 
-    { "header" => lines[0..6], "date_time" => lines[-3..-1] }
+    { "header" => lines[0..6], "date_time" => lines[-4..-1] }
   end
 
   def self.parse_reg_fee

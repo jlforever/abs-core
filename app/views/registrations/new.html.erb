@@ -45,9 +45,17 @@
 				</ul>
 			<% end %>
 			<% if @date_time['virtual-spanish'].present? %>
-				<h2>Virtual Spanish Class via Zoom, Ms. Amaia:</h2>
+				<h2>Virtual ESP L-zero Class via Zoom, Ms. Gaby:</h2>
 				<ul>
 					<% @date_time['virtual-spanish'].each do |dt| %>
+						<li><%= dt %></li>
+					<% end %>
+				</ul>
+			<% end %>
+			<% if @date_time['virtual-spanish2'].present? %>
+				<h2>Virtual ESP Beginner Class via Zoom, Ms. Gaby:</h2>
+				<ul>
+					<% @date_time['virtual-spanish2'].each do |dt| %>
 						<li><%= dt %></li>
 					<% end %>
 				</ul>
