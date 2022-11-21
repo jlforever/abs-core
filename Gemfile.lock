@@ -50,7 +50,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     concurrent-ruby (1.1.6)
-    dalli (2.6.4)
+    dalli (3.2.3)
     devise (2.2.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
